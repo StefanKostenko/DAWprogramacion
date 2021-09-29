@@ -12,5 +12,6 @@ public class Ejemplo4{
 
         areaTotal = lado * lado;
         System.out.println(areaTotal); 
+        inputValue.close();
     }
 }
