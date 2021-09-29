@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Ejemplo8 {
+public class Ejemplo9 {
     public static void main(String[] args) {
         int edad;
 
@@ -11,6 +11,8 @@ public class Ejemplo8 {
 
         if(edad >= 18){
             System.out.println("Mayor de edad ");
+        }else{
+            System.out.println("Menor de edad");
         }
     }
 }
