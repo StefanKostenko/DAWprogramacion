@@ -15,7 +15,7 @@ public class Ejemplo13 {
         valorEntrante2 = new Scanner(System.in);
         numero2 = valorEntrante2.nextInt();
 
-        System.out.println("Escribeme si quieres ver el orden delos numeros ascendente o descendente : ");
+        System.out.println("Escribeme si quieres ver el orden de los numeros ascendente o descendente : ");
         Scanner valorEntrante3;
         valorEntrante3 = new Scanner(System.in);
         orden = valorEntrante3.nextLine();
