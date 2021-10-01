@@ -24,25 +24,20 @@ public class Ejemplo13 {
         valorEntrante2.close();
         valorEntrante3.close();
 
-        if("ascendente".equals(orden)){
-            if(numero1 <= numero2){
-                System.out.println(" " + numero1 + " , " + numero2);
-            }else if("ascendente".equals(orden)){
-                if(numero1 >= numero2){
-                System.out.println(" " + numero2 + " , " + numero1);
-                }else if("descendente".equals(orden)){
-                        if(numero1 >= numero2){
-                            System.out.println(" " + numero1 + " , " + numero2);
-                        }else if("descendente".equals(orden)){
-                            if(numero1 <= numero2){
-                                System.out.println(" " + numero2 + " , " + numero1);
-                            }
-                    }
-                }
+        if(orden.equals("ascendente")) {
+            if(numero1 <= numero2) {
+                System.out.println(numero1 + ", " + numero2);
+            }else{
+                System.out.println(numero2 + ", " + numero1);
             }
-        }else{
-            System.out.println("Error!");
         }
-
+        
+        if(orden.equals("descendente")) {
+            if(numero1 >= numero2) {
+                System.out.println(numero1 + ", " + numero2);
+            }else{
+                System.out.println(numero2 + ", " + numero1);
+            }
+        }
     }
 }
