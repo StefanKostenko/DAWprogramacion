@@ -4,10 +4,10 @@ public class Ejemplo17 {
     public static void main(String[] args) {
         
         String mes;
-
-        System.out.println("Escribeme el mes para saber el numero de dias que tiene: ");
         Scanner valorEntrante;
         valorEntrante = new Scanner(System.in);
+
+        System.out.println("Escribeme el mes para saber el numero de dias que tiene: ");
         mes = valorEntrante.nextLine();
 
         valorEntrante.close();
