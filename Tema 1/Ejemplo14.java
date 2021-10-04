@@ -2,10 +2,10 @@ import java.util.Scanner;
 public class Ejemplo14 {
     public static void main(String[] args) {
         int nota;
-
-        System.out.println("Escribeme aqui la nota de tu examen para saber el valor de la nota: ");
         Scanner valorEntrante;
         valorEntrante = new Scanner(System.in);
+
+        System.out.println("Escribeme aqui la nota de tu examen para saber el valor de la nota: ");
         nota = valorEntrante.nextInt();
 
         valorEntrante.close();
