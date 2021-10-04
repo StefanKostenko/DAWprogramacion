@@ -60,6 +60,10 @@ public class Ejemplo17 {
             case "Diciembre":
             System.out.println("El mes de enero tiene 31 dias");
             break;
+
+            default:
+            System.out.println("Error!");
+            break;
         }
     }
 }
