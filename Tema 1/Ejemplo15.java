@@ -2,10 +2,10 @@ import java.util.Scanner;
 public class Ejemplo15 {
     public static void main(String[] args) {
         int numero;
-
-        System.out.println("Escribeme aqui un numero entero de 0 a 15: ");
         Scanner valorEntrante;
         valorEntrante = new Scanner(System.in);
+
+        System.out.println("Escribeme aqui un numero entero de 0 a 15: ");
         numero = valorEntrante.nextInt();
 
         valorEntrante.close();
