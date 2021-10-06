@@ -29,8 +29,8 @@ public class Ejemplo19 {
                 neto = bruto * 0.55;
             }
 
-            System.out.println(bruto - neto);
-            System.out.println(bruto);
-            System.out.println(neto);
+            System.out.println ("El salario bruto es: " + bruto + " euros");
+            System.out.println("El salario neto es: " + neto + " euros");
+            System.out.println("El impusto es de unos : " + (bruto - neto) + " euros");
     }
 }
