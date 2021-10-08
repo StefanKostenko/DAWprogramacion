@@ -4,7 +4,7 @@ public class Ejemplo19 {
     public static void main(String[] args) {
         
         int horas, horasDeMas;
-        double eurosPorHora, bruto, neto, impuestors;
+        double eurosPorHora, bruto, neto;
         Scanner valorEntrante;
         valorEntrante = new Scanner(System.in);
 
@@ -15,7 +15,7 @@ public class Ejemplo19 {
         horas = valorEntrante.nextInt();
 
         valorEntrante.close();
-        
+
         if(horas <= 35){
             bruto = eurosPorHora * horas;
         }else {
