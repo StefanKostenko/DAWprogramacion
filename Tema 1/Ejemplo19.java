@@ -14,6 +14,8 @@ public class Ejemplo19 {
         System.out.println("Escribeme las horas que has trabajado este mes: ");
         horas = valorEntrante.nextInt();
 
+        valorEntrante.close();
+        
         if(horas <= 35){
             bruto = eurosPorHora * horas;
         }else {
