@@ -11,12 +11,17 @@ public class Control01 {
         ladosDePoligono = escaner.nextInt();
 
         if(ladosDePoligono >= 3 && ladosDePoligono <= 4){
-            System.out.println("Dime la longitud del lado del polígono (con decimales): ");
+            System.out.println("Dime la longitud del lado del polígono: ");
             longitudDelLadoDelPoligono = escaner.nextDouble();
 
-            System.out.println("El perimetro es: " + ladosDePoligono * longitudDelLadoDelPoligono);
-        }else{
-            System.out.println("Usted ha introducido mas o menos lados del poligono de los que se permite!");
+            if(ladosDePoligono == 3){
+                System.out.println("El perimetro del triangulo es: " + ladosDePoligono * longitudDelLadoDelPoligono);
+            }
+
+            if(ladosDePoligono == 4){
+                System.out.println("El perimetro del cuadrado es: " + ladosDePoligono * longitudDelLadoDelPoligono);
+            }
+
         }
 
         escaner.close();
