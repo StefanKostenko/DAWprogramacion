@@ -7,7 +7,7 @@ public class Control01 {
         Scanner escaner;
         escaner = new Scanner(System.in);
 
-        System.out.println("Dame de lados del poligono: ");
+        System.out.println("Dime el número de lados del polígono: ");
         ladosDePoligono = escaner.nextInt();
 
         if(ladosDePoligono >= 3 && ladosDePoligono <= 4){
