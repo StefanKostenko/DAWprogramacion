@@ -3,19 +3,19 @@ public class Ejemplo27 {
     public static void main(String[] args) {
         
         int numeroDeUsuario;
-        String lista = "";
         Scanner escaner;
         escaner = new Scanner(System.in);
 
         System.out.println("Escribeme un numero : ");
         numeroDeUsuario = escaner.nextInt();
-        numeroDeUsuario ++;
 
         escaner.close();    
 
-        for (int i = 1; i < numeroDeUsuario; i++) {
-            lista = lista + " " + String.valueOf(i);
-            System.out.println(lista);
+        for (int i = 1; i <= numeroDeUsuario; i++) {
+            for(int j=1;j<=i;j++){
+                System.out.print(j+" ");
+            }
+            System.out.println("");
         }      
     }
 }
