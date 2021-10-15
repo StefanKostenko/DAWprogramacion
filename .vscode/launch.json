@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ejemplo28",
+            "request": "launch",
+            "mainClass": "Ejemplo28",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Bucles",
             "request": "launch",
             "mainClass": "Bucles",
