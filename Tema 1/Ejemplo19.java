@@ -23,16 +23,16 @@ public class Ejemplo19 {
             bruto = (((eurosPorHora * horasDeMas) * 1.5) + (eurosPorHora * 35));
         }
 
-            if(bruto <= 500.0){
-                neto = bruto;
-            }else if(bruto <= 900.0){
-                neto = bruto * 0.75;
-            }else{
-                neto = bruto * 0.55;
-            }
+        if(bruto <= 500.0){
+            neto = bruto;
+        }else if(bruto <= 900.0){
+            neto = (bruto - 500) * 0.75;
+        }else{
+            neto = 500 + (400 * 0.75) + (bruto - 900) * 0.55;
+        }
 
-            System.out.println ("El salario bruto es: " + bruto + " euros");
-            System.out.println("El salario neto es: " + neto + " euros");
-            System.out.println("El impusto es de unos : " + (bruto - neto) + " euros");
+        System.out.println ("El salario bruto es: " + bruto + " euros");
+        System.out.println("El salario neto es: " + neto + " euros");
+        System.out.println("El impusto es de unos : " + (bruto - neto) + " euros");
     }
 }
