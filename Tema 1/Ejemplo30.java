@@ -22,7 +22,7 @@ public class Ejemplo30 {
         laMitadDeLaLongitud = longitud/2;
 
         for (int i = 1; i < laMitadDeLaLongitud; i++) {
-            if(palabraUsuario.charAt(i) != palabraUsuario.charAt(longitud - i)){
+            if(palabraUsuario.charAt(i -1) != palabraUsuario.charAt(longitud - i)){
             palindromo = false;
             }
         }
