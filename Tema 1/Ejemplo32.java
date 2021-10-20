@@ -13,7 +13,9 @@ public class Ejemplo32 {
             anArray[i] = escaner.nextInt();
         }
 
-        for (int j = 10; j < 0; j--) {
+        System.out.println("");
+
+        for (int j = 9; j >= 0; j--) {
             System.out.println(anArray[j]);
         }
 
