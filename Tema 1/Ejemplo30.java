@@ -32,5 +32,6 @@ public class Ejemplo30 {
         } else if(palindromo == false){
             System.out.println("La palabra no es palindroma!");
         }
+        escaner.close();
     }
 }
