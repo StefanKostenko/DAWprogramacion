@@ -16,8 +16,8 @@ public class Ejemplo30 {
         palabraUsuario = escaner.nextLine();
 
         //Damos el valor a la longitud que es el numero de letras que introduce el usuario.
-        //Y la mitad de la longi
-
+        //Y calculamos la mitad de la longitud para ultilizarla en el bucle para la condicion de parada.
+    
         longitud = palabraUsuario.length();
         laMitadDeLaLongitud = longitud/2;
 
