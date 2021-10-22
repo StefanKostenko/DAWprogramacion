@@ -9,7 +9,11 @@ public class Ejemplo33 {
         System.out.println("Dame los numero del DNI para verificar su letra 8 digitos:");
         numeroDNI = escaner.nextInt();
 
-        System.out.println(numeroDNI + " " + anArray[numeroDNI%23]);
-        escaner.close();
+        if( numeroDNI > 9999999 && numeroDNI <= 99999999){
+            System.out.println(numeroDNI + " " + anArray[numeroDNI%23]);
+            escaner.close();
+        } else {
+            System.out.println("Erorr! El numero de digitos no es correcto!");
+        }
     }    
 }
