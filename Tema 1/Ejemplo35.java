@@ -8,8 +8,14 @@ public class Ejemplo35 {
         Scanner valorEntrante;
         valorEntrante = new Scanner(System.in);
 
-        System.out.println("Escribeme tus notas para calcular la media y para finalizar escribe el -1: ");
-        nota = valorEntrante.nextInt();
+        System.out.println("Escribeme 10 de tus notas para calcular la media:");
+        for (int i = 0; i < anArray.length; i++) {
+            anArray[i] = escaner.nextInt();
+        }
+
+        
+
+
 
         valorEntrante.close();
     }    
