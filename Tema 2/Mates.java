@@ -28,11 +28,10 @@ public class Mates {
         return resultado;
     }
 
-    public static void main(String[] args) {
-        System.out.println("La suma es igual: " + suma(10, 2));
-        System.out.println("La resta es igual: " + resta(10, 2));
-        System.out.println("La multiplicacion es igual: " + multiplicacion(10, 2));
-        System.out.println("La division es igual: " + division(10, 2));
-    }
+    public static double areaDelCirculo(double radio){
+        double resultado = 0;
+        resultado = radio*radio * Math.PI;
 
+        return resultado;
+    }
 }
