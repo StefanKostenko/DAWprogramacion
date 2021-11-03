@@ -6,14 +6,13 @@ public class Ejemplo37 {
         numeros = new double[10];
         Scanner lector;
         lector = new Scanner(System.in);
-
-        double maximo = numeros[0];
-        
         
         System.out.println("Dame 10 numeros para sacar el maximo: ");
         for (int i = 0; i < numeros.length; i++) {
             numeros[i] = lector.nextDouble();
         }
+
+        double maximo = numeros[0]; 
 
         for (int i = 0; i < numeros.length; i++) {
             if(numeros[i] > maximo){
@@ -22,7 +21,7 @@ public class Ejemplo37 {
         }
 
         double minimo = numeros[0];
-        
+
         for (int i = 0; i < numeros.length; i++) {
             if(numeros[i] < minimo){
                 minimo = numeros[i];
