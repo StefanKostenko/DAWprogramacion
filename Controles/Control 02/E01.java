@@ -6,7 +6,7 @@ public class E01 {
         Scanner lector;
         lector = new Scanner(System.in);
 
-        System.out.println("Ingrese su nombre: ");
+        System.out.print("Ingrese su nombre: ");
         nombre = lector.nextLine();
 
         System.out.println("Hola, " + nombre);
