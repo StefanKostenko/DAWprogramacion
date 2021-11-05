@@ -6,7 +6,7 @@ public class E02 {
         Scanner lector;
         lector = new Scanner(System.in);
 
-        System.out.println("Ingrese el radio: ");
+        System.out.print("Ingrese el radio: ");
         radio = lector.nextDouble();
 
         perimetro = 2 * Math.PI * radio;
