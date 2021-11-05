@@ -16,5 +16,7 @@ public class E05 {
         invertido2  = numeroString.charAt(1);
         invertido3  = numeroString.charAt(0);
         System.out.println(invertido1 + "" +  invertido2 + "" + invertido3);
+
+        lector.close();
     }
 }
