@@ -6,16 +6,16 @@ public class E03 {
         Scanner lector;
         lector = new Scanner(System.in);
 
-        System.out.println("Primera nota: ");
+        System.out.print("Primera nota: ");
         nota1 = lector.nextInt();
 
-        System.out.println("Segunda nota: ");
+        System.out.print("Segunda nota: ");
         nota2 = lector.nextInt();
 
-        System.out.println("Tercera nota: ");
+        System.out.print("Tercera nota: ");
         nota3 = lector.nextInt();
 
-        System.out.println("Cuarta nota: ");
+        System.out.print("Cuarta nota: ");
         nota4 = lector.nextInt();
 
         promedio = (nota1 + nota2 + nota3 + nota4) / 4;
