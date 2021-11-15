@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Primos",
+            "request": "launch",
+            "mainClass": "Primos",
+            "projectName": "DAWprogramacion_41cb719f"
+        },
+        {
+            "type": "java",
+            "name": "Launch Primo",
+            "request": "launch",
+            "mainClass": "Primo",
+            "projectName": "DAWprogramacion_41cb719f"
+        },
+        {
+            "type": "java",
             "name": "Launch LetraDni",
             "request": "launch",
             "mainClass": "LetraDni",
