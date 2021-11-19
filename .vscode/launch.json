@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ejemplo39",
+            "request": "launch",
+            "mainClass": "Ejemplo39",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch EsTriangulo",
+            "request": "launch",
+            "mainClass": "EsTriangulo",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejemplo38",
+            "request": "launch",
+            "mainClass": "Ejemplo38",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Primos",
             "request": "launch",
             "mainClass": "Primos",
