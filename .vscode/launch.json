@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Nota",
+            "request": "launch",
+            "mainClass": "Nota",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Descendente",
+            "request": "launch",
+            "mainClass": "Descendente",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Positivos10",
             "request": "launch",
             "mainClass": "Positivos10",
