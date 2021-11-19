@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Mayor",
+            "request": "launch",
+            "mainClass": "Mayor",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Ejemplo39",
             "request": "launch",
             "mainClass": "Ejemplo39",
