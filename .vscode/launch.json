@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Eliminar",
+            "request": "launch",
+            "mainClass": "Eliminar",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Duplicados",
+            "request": "launch",
+            "mainClass": "Duplicados",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Nota",
             "request": "launch",
             "mainClass": "Nota",
