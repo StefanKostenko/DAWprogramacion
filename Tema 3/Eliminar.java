@@ -6,12 +6,12 @@ public class Eliminar {
         //Utilidades.rellenaArray(numeros, 1, 10);
 
         int [] numeros = {1,2,3,4,4,3,2,6,9};
-
         int indice = 2;
+        int numeroBorrado = numeros[indice];
 
         for (int i = indice + 1; i < numeros.length; i++) {
             numeros[i - 1] = numeros[i];
         }
-        numeros[numeros.length - 1] = 0;
+        numeros[numeros.length - 1] = numeroBorrado;
     }
 }
