@@ -70,4 +70,11 @@ public class Utilidades {
 			}
 		}
 	}
+
+	public static void 	mostrarArray(int vector[]) {
+		int i;
+			for (i=0; i< vector.length; i++) {
+				System.out.println("matriz[" + i + "]=" + vector[i] );
+		}
+	}
 }
