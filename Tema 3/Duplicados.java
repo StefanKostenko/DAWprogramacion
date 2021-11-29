@@ -8,7 +8,7 @@ public class Duplicados {
         numerosDuplicados(numeros);
     }
 
-    private static void numerosDuplicados(int[] numeros) {
+    public static void numerosDuplicados(int[] numeros) {
         for (int i = 0; i < numeros.length; i++) {
             for (int j = i + 1 ; j < numeros.length; j++){
                 if(numeros[i] == numeros[j]){

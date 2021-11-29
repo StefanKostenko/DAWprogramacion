@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Comunes",
+            "request": "launch",
+            "mainClass": "Comunes",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Eliminar",
             "request": "launch",
             "mainClass": "Eliminar",
