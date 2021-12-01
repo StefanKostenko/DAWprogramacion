@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MoverCeros",
+            "request": "launch",
+            "mainClass": "MoverCeros",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch ParesImpares",
             "request": "launch",
             "mainClass": "ParesImpares",
