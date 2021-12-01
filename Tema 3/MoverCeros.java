@@ -20,3 +20,5 @@ public class MoverCeros {
         }
     }
 }
+
+// cambiar el orden de drecha a izquiera en el for
