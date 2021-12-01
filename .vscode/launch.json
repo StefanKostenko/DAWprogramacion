@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Iguales",
+            "request": "launch",
+            "mainClass": "Iguales",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch SumaIgual",
             "request": "launch",
             "mainClass": "SumaIgual",
