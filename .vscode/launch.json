@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Comparar",
+            "request": "launch",
+            "mainClass": "Comparar",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch RellenarMatriz",
             "request": "launch",
             "mainClass": "RellenarMatriz",
