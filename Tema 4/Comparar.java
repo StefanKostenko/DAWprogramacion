@@ -1,7 +1,7 @@
 public class Comparar {
     public static void main(String[] args) {
         
-        String cadena1 = "Hola", cadena2 = "Hola";
+        String cadena1 = "aaa", cadena2 = "AAA";
         int compararCadenas;
         
         compararCadenas = cadena1.compareTo(cadena2);
