@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Digitos",
+            "request": "launch",
+            "mainClass": "Digitos",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Longitud3",
             "request": "launch",
             "mainClass": "Longitud3",
