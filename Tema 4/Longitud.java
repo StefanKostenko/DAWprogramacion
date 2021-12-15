@@ -1,13 +1,17 @@
 public class Longitud {
     public static void main(String[] args) {
         
-        String cadena = "Hola mundo, k tal k?";
-        int contador = 0;
+        int longitud = 4;
+        String cadena = "Hola mundo";
+        String palabras[] = Utilidades.dividirEnPalabras(cadena);
+        int contadorDePalabras = 0;
 
-        if(cadena.contains("k")){
-            contador++;
+        for (int i = 0; i < palabras.length; i++) {
+            if(palabras[i].length() == longitud){
+                contadorDePalabras++;
+            }
         }
 
-        System.out.println("Hay tal numero de caracteres de k " + contador);
+        System.out.println("Hay " + contadorDePalabras + " con la longitud " + longitud);
     }
 }

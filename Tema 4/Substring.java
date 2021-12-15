@@ -4,5 +4,6 @@ public class Substring {
 
         cadenaSubString = cadena.substring(0, 4);
         System.out.println(cadenaSubString);
+
     }
 }
