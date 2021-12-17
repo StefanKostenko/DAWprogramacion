@@ -1,6 +1,6 @@
 public class Digitos2 {
     public static void main(String[] args) {
-        String cadena = "un 20 i 23 i 2131";
+        String cadena = "12 sa 2  123";
         String palabras[] = Utilidades.dividirEnPalabras(cadena);
         int numeros = 0;
 

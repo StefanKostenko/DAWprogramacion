@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Parentesis",
+            "request": "launch",
+            "mainClass": "Parentesis",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Digitos2",
             "request": "launch",
             "mainClass": "Digitos2",
