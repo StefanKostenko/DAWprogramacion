@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ChorriChat",
+            "request": "launch",
+            "mainClass": "ChorriChat",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch DuplicadoMasComun",
+            "request": "launch",
+            "mainClass": "DuplicadoMasComun",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Invertida",
             "request": "launch",
             "mainClass": "Invertida",
