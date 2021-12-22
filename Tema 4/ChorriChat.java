@@ -16,10 +16,7 @@ public class ChorriChat {
 
             do{
                 mensajeUsuario = Utilidades.leerCadena(">>>");
-                int indiceAleatorio = numeroAleatorioEnRango(0, mensajeDeChorri.length -1);
-                String mensajeDeChorriAleatorio = mensajeDeChorri[indiceAleatorio];
-                System.out.println(mensajeDeChorriAleatorio);
-                
+                imprimirFraseAleatoria(mensajeDeChorri);
 
             }while(!esFin(mensajeUsuario));
 
@@ -27,10 +24,14 @@ public class ChorriChat {
                 System.out.println("Ha sido un placer, bebé <3");
             }
             
-            
         }
+        
+    }
 
-
+    private static void imprimirFraseAleatoria(String[] mensajeDeChorri) {
+        int indiceAleatorio = numeroAleatorioEnRango(0, mensajeDeChorri.length -1);
+        String mensajeDeChorriAleatorio = mensajeDeChorri[indiceAleatorio];
+        System.out.println(mensajeDeChorriAleatorio);
     }
 
     private static int numeroAleatorioEnRango(int minimo, int maximo) {
