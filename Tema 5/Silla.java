@@ -2,6 +2,14 @@ import java.awt.Point;
 
 public class Silla {
 
+    private static final int CORRDENADA_MIN = 0;
+    private static final int CORRDENADA_MAX = 100;
+    private static final int NUMPATAS_MIN = 1;
+    private static final int NUMPATAS_MAX = 4;
+    private static final int COMODIDAD_MIN = 0;
+    private static final int COMODIDAD_MAX = 10;
+
+    
     private static String [] colores = {"azul " , "rojo " , "amarillo " , "negro "};
     private static String [] materiales = {"madera " , "metal " , "plastico "}; 
 
@@ -36,8 +44,8 @@ public class Silla {
     public static Point cordenadasAleatorio(){
         Point punto = new Point();
 
-        int min = 0;
-        int max = 100;
+        int min = Silla.CORRDENADA_MIN;
+        int max = Silla.CORRDENADA_MAX;
 
         int x = (int) (Math.random() * (max - min + 1) + min);
         int y = (int) (Math.random() * (max - min + 1) + min);
@@ -47,7 +55,7 @@ public class Silla {
     }
 
     public static boolean respaldoAleatorio(){
-        int min = 0, max = 4;
+        int min = 0, max = 1;
 
         int aleatorio = (int) (Math.random() * (max - min + 1) + min);
 
@@ -59,7 +67,7 @@ public class Silla {
     }
 
     public static int numPatasAleatorio(){
-        int min = 0, max = 4;
+        int min = Silla.NUMPATAS_MIN, max = Silla.NUMPATAS_MAX;
 
         int aleatorio = (int) (Math.random() * (max - min + 1) + min);
 
@@ -67,7 +75,7 @@ public class Silla {
     }
 
     public static int comodidadAleatorio(){
-        int min = 0, max = 4;
+        int min = Silla.COMODIDAD_MIN, max = Silla.COMODIDAD_MAX;
 
         int aleatorio = (int) (Math.random() * (max - min + 1) + min);
 
