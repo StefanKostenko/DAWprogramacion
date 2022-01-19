@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PruebaTicket",
+            "request": "launch",
+            "mainClass": "PruebaTicket",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch PruebaSilla",
             "request": "launch",
             "mainClass": "PruebaSilla",
