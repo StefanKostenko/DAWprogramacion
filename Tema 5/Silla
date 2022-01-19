@@ -1,0 +1,11 @@
+crear clase silla, que no tendra main.
+
+atributos de la silla, el color, numero de patas, si tiene respaldo o no, nivel de comodidad del 0 al 10,
+
+y el material que tiene que ser un string.
+
+ademas la clase silla tiene unas coordenadas en una habitacion con x e y (point).
+
+definir atributos como privados pero desde la clase de prueba test se podran modificar y acceder a su valor.
+
+en la clase de prueba creamos aleatoriamente 100 sillas con distintas posiciones, materiales, etc.

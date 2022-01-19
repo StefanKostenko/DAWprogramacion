@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PruebaSilla",
+            "request": "launch",
+            "mainClass": "PruebaSilla",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch pruebaSilla",
+            "request": "launch",
+            "mainClass": "pruebaSilla",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch ChorriChat",
             "request": "launch",
             "mainClass": "ChorriChat",
