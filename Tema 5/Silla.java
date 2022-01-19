@@ -9,7 +9,6 @@ public class Silla {
     private static final int COMODIDAD_MIN = 0;
     private static final int COMODIDAD_MAX = 10;
 
-    
     private static String [] colores = {"azul " , "rojo " , "amarillo " , "negro "};
     private static String [] materiales = {"madera " , "metal " , "plastico "}; 
 
@@ -41,6 +40,8 @@ public class Silla {
         this.material = material;
     }
 
+    // Crear Valores aleatorios
+    
     public static Point cordenadasAleatorio(){
         Point punto = new Point();
 
