@@ -7,6 +7,11 @@ public class Heater {
     private double increment;
 
 
+    //Getter Temperature
+    public double getTemperature() {
+        return temperature;
+    }
+
     //Setter Increment
     public void setIncrement(double increment) {
         if(increment >= 1.0 && increment <= 5.0){
@@ -35,11 +40,6 @@ public class Heater {
         if(temperatureReducida >= min){
             temperature = temperature - increment;
         }
-    }
-
-    //Metodos
-    public void printTemperature(){
-        System.out.println(temperature);
     }
 
 }

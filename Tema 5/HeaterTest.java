@@ -9,6 +9,6 @@ public class HeaterTest {
         h1.warmer();
         h1.warmer();
         h1.cooler();
-        h1.printTemperature();
+        h1.getTemperature();
     }
 }
