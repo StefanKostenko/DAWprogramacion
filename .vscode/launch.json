@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ClockDisplayTest",
+            "request": "launch",
+            "mainClass": "ClockDisplayTest",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch HeaterTest",
             "request": "launch",
             "mainClass": "HeaterTest",
