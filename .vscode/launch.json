@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HeaterTest",
+            "request": "launch",
+            "mainClass": "HeaterTest",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch BookTest",
+            "request": "launch",
+            "mainClass": "BookTest",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch TicketMachineTest2",
+            "request": "launch",
+            "mainClass": "TicketMachineTest2",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch PruebaTicket",
             "request": "launch",
             "mainClass": "PruebaTicket",
