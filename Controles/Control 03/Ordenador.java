@@ -8,6 +8,8 @@ public class Ordenador {
     private String formato;
     private String color;
     private Teclado teclado;
+    //Atributo que he creado para conectar el ordenador a otro
+    private String conexion;
 
     // Constructor vacio
 
@@ -15,41 +17,34 @@ public class Ordenador {
         this.color = Ordenador.colorAleatorio();
         this.formato = Ordenador.formatoAleatorio();
         this.teclado = new Teclado();
+        this.conexion = 
     }
 
     // Constructor
     public Ordenador(String formato, String color, Teclado teclado) {
-        this.formato = formato;
+        
+        if(formato == formatos[0] || formato == formatos[1]){
+            this.formato = formato;
+        }else{
+            this.formato = "Sobremesa";
+        }
         this.color = color;
         this.teclado = teclado;
     }
 
-    // Getter y setters
+    // Getter
 
     public String getFormato() {
         return formato;
-    }
-
-    public void setFormato(String formato) {
-        this.formato = formato;
     }
 
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public Teclado getTeclado() {
         return teclado;
     }
-
-    public void setTeclado(Teclado teclado) {
-        this.teclado = teclado;
-    }
-
 
     //Color aleatorio
 
