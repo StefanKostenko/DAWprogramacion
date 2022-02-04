@@ -62,8 +62,14 @@ public class MailClient
     }
 
     public void forwedLastMailItem(String forwardTo){
-        MailItem correoAnterior = getNextMailItem();
-
-        sendMailItem(forwardTo, correoAnterior.asunto, CorreoAnterior.message);
+        MailItem correoAnterior = server.getNextMailItem(user);
+        if(correoAnterior == null) {
+            System.out.println("No new mail.");
+        }
+        else {
+            correoAnterior.print();
+            correoAnterior.setTo(forwardTo);
+            server.post(correoAnterior);
+        }
     }
 }

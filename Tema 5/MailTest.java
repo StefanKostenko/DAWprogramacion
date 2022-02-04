@@ -4,6 +4,7 @@ public class MailTest {
         MailServer s1 = new  MailServer();
         MailClient c1 = new MailClient(s1, "Julio");
         MailClient c2 = new MailClient(s1, "Pepe");
+        MailClient c3 = new MailClient(s1, "Ana");
 
         c1.sendMailItem("Julio;Pepe", "Hola", "Soy programador!");
 
@@ -11,7 +12,10 @@ public class MailTest {
         c1.printNextMailItem();
 
         System.out.println(s1.howManyMailItems("Pepe"));
-        c2.printNextMailItem();
+
+        c2.forwedLastMailItem("Ana");
+        System.out.println(s1.howManyMailItems("Ana"));
+        c3.printNextMailItem();
 
     }
 }

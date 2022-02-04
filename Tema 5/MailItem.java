@@ -31,6 +31,10 @@ public class MailItem
         this.asunto = asunto;
     }
 
+    public void setTo(String to) {
+        this.to = to;
+    }
+
     /**
      * @return The sender of this message.
      */
