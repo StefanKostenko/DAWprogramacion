@@ -9,14 +9,11 @@ public class Test {
 
         Teclado t1 = new Teclado("rojo", 100, "Inalambrico", "EN", "compacto");
         
-        Teclado t2 = new Teclado("Negro", 122, "Por cable", "ES", "extendido");
+        Teclado t2 = new Teclado();
 
         Teclado.mostrarContador();
 
-       // Teclado.mostrarContador();
-
-        // Ordenador ordenador1;
-
+        Ordenador o1 = new Ordenador("Portatil", "azul", t1);
 
     }
 }
