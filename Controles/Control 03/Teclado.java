@@ -2,7 +2,7 @@ public class Teclado {
     
     private static String [] colores = {"Negro" , "Blanco" , "Rojo" , "Azul" , "Gris" };
     private static String [] conectividades = {"Inalambrico" , "Por cable"};
-    private static String [] idiomas = {"[EN]" , "[ES]" , "[FR]" , "[RU]" , "[ZH]"};
+    private static String [] idiomas = {"EN" , "ES" , "FR" , "RU" , "ZH"};
     private static String [] formatos = {"compacto" , "extendido"};
 
     private static final int NUMTECLAS_MIN = 65;
@@ -18,7 +18,7 @@ public class Teclado {
 
     // Contador
     
-    private static int contador;
+    private static int contador = 0;
 
 
     // Constructor vacio
@@ -36,10 +36,37 @@ public class Teclado {
 
     public Teclado(String color, int numeroDeTeclas, String conectividad, String idioma, String formato) {
         this.color = color;
-        this.numeroDeTeclas = numeroDeTeclas;
-        this.conectividad = conectividad;
-        this.idioma = idioma;
-        this.formato = formato; 
+        
+        // numero de teclas 
+        if(numeroDeTeclas < 65){
+            this.numeroDeTeclas = 65;
+        }else if(numeroDeTeclas > 150){
+            this.numeroDeTeclas = 150;
+        }else{
+            this.numeroDeTeclas = numeroDeTeclas;
+        }
+        
+        // conectividad por defecto viene "por cable"
+        if(conectividad == conectividades[0]|| conectividad == conectividades[1]){
+            this.conectividad = conectividad;
+        }else{
+            this.conectividad = conectividades[1];
+        }
+        
+        // Idiomas por defecto viene el "ES"
+        if(idioma.length() == 2){
+            this.idioma = idioma;
+        }else{
+            this.idioma = "ES";
+        }
+
+        // Formato por defecto es "extendido"
+        if(formato == formatos[0] || formato == formatos[1]){
+            this.formato = formato;
+        }else{
+            this.formato = "extendido";
+        }
+
         this.contador++;
     }
         
@@ -66,37 +93,6 @@ public class Teclado {
 
     public int getContador() {
         return contador;
-    }
-
-    // Setters
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setNumeroDeTeclas(int numeroDeTeclas) {
-        if(numeroDeTeclas < 65){
-            this.numeroDeTeclas = 65;
-        }else if(numeroDeTeclas > 150){
-            this.numeroDeTeclas = 150;
-        }else{
-            this.numeroDeTeclas = numeroDeTeclas;
-        }
-    }
-
-    public void setConectividad(String conectividad) {
-        this.conectividad = conectividad;
-    }
-
-    public void setIdioma(String idioma) {
-        this.idioma = idioma;
-    }
-
-    public void setFormato(String formato) {
-        this.formato = formato;
-    }
-
-    public void setContador(int contador){
-        this.contador = 0;
     }
 
     // Color aleatorio
@@ -156,7 +152,7 @@ public class Teclado {
     // Imprimir contador
 
     public static void mostrarContador(){
-        System.out.println("Cantidad de teclados creados: " + Teclado.contador);
+        System.out.println("Cantidad de teclados creados: " + contador);
     }
     
 }
