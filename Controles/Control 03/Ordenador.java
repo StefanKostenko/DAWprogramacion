@@ -9,7 +9,7 @@ public class Ordenador {
     private String color;
     private Teclado teclado;
     //Atributo que he creado para conectar el ordenador a otro
-    private String conexion;
+    //private String conexion;
 
     // Constructor vacio
 
@@ -17,7 +17,6 @@ public class Ordenador {
         this.color = Ordenador.colorAleatorio();
         this.formato = Ordenador.formatoAleatorio();
         this.teclado = new Teclado();
-        this.conexion = 
     }
 
     // Constructor
