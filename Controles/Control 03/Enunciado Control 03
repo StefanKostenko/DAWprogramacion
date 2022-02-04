@@ -1,0 +1,32 @@
+Crea una clase "teclado" con los siguientes atributos privados
+
+-color
+-numero de teclas
+-conectividad que indica si el teclado es inalamrico o por cable
+-idioma representado por dos letras que marca el idioma del pais
+-formato si puede tomar los valores compacto o extendido
+
+Crea los getters y los setters apropiados teniendo en cuenta que crado una vez "teclado" no se pueda modificar sus atributos
+Pero si se pueden leer
+
+Crea un contador que permita contar los teclados que se han ido creando en el sistema
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Crea una clase "Ordenador"
+
+con los siguientes atributos privados
+
+-formato que pueda tomar los valores sobremesa o portatil
+-color
+-teclado la clase anterior
+
+Crea los getters y los setters apropiados teniendo en cuentea que solo el tecladdo puede ser modificado despues de crear el ordenador
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Para las dos clases teneomsque crear dos constructors uno sin parametros y otro que si que se espesifican los valores en concreto
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+En la clase ordenador crear un metodo que se llame conectar y que recibe como parametro otro ordenador de manera que un ordenador pueda estar connectado a otro.
