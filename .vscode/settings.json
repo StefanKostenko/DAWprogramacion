@@ -6,5 +6,9 @@
         "Tema 2",
         "Tema 1",
         "Controles/Control 03"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Tema 5/lib/jl1.0.1.jar"
     ]
 }
