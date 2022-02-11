@@ -145,13 +145,13 @@ public class MusicOrganizer
         boolean found = false;
         int cancionEncontrada = -1;
         int index = 0;  
-        int longitudFiles = files.size();
-        while (!found && index < longitudFiles)
+        while (!found && index < files.size())
         {
             if(this.files.get(index).contains(searchString))
             {
                 found = true;
                 cancionEncontrada = index;
+                break;
             }   
             index++;
         }
