@@ -138,4 +138,23 @@ public class MusicOrganizer
 
         return cancionesMatch;
     }
-}
+
+    //findFirst 
+
+    public int findFirst(String searchString){
+        boolean found = false;
+        int cancionEncontrada = -1;
+        int index = 0;  
+        int longitudFiles = files.size();
+        while (!found && index < longitudFiles)
+        {
+            if(this.files.get(index).contains(searchString))
+            {
+                found = true;
+                cancionEncontrada = index;
+            }   
+            index++;
+        }
+        return cancionEncontrada;
+    }
+}   
