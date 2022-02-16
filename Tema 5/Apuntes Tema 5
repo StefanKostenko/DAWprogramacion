@@ -21,3 +21,6 @@ Si el metodo tieneque devolver algun valor que luego va a ultilizarse o a guarda
 -------------------------------------------------------------------------
 Al contrario si el metodo solo se ejecuta y hace su funcion y ya no se guarda en el sistema el metodo va a ser void.
 
+///////////////////////////////////////////////////////////////////////////
+
+Si vamos a comparar objetos ultilizaremos .equals demas de == ya que el == compara la misma direcion de memoria y el .equals compara el contenido.
