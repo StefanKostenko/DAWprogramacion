@@ -9,7 +9,8 @@ sin Static es de objeto.
 
 Getters son los selectores
 -------------------------------------------------------------------------
-Setters son los mutadores : si quieres tener parametros fijos si poder cambiarlos despues en el objeto puedes no ultilizar los setters.
+Setters son los mutadores : 
+si quieres tener parametros fijos si poder cambiarlos despues en el objeto puedes no ultilizar los setters.
 
 ///////////////////////////////////////////////////////////////////////////
 
@@ -17,10 +18,12 @@ En el Constructor puedes poner los diferentes condiciones ya si el ejercicio te 
 
 ///////////////////////////////////////////////////////////////////////////
 
-Si el metodo tieneque devolver algun valor que luego va a ultilizarse o a guardarse en el sistema tiene que ir acompañado de su correspondiente calor (String - int -boolean...)
+Si el metodo tieneque devolver algun valor que luego va a ultilizarse o a guardarse en el sistema 
+tiene que ir acompañado de su correspondiente calor (String - int -boolean...)
 -------------------------------------------------------------------------
 Al contrario si el metodo solo se ejecuta y hace su funcion y ya no se guarda en el sistema el metodo va a ser void.
 
 ///////////////////////////////////////////////////////////////////////////
 
-Si vamos a comparar objetos ultilizaremos .equals demas de == ya que el == compara la misma direcion de memoria y el .equals compara el contenido.
+Si vamos a comparar objetos ultilizaremos .equals demas de == ya que el == compara la misma direcion de memoria 
+y el .equals compara el contenido.
