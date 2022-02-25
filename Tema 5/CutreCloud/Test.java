@@ -7,5 +7,12 @@ public class Test {
         Usuario u2 = new Usuario(43, "fghd@gmail.com", "djkfghks");
         Usuario u3 = new Usuario(124, "gfh@tata.com", "dfjgl");
         Usuario u4 = new Usuario(123, "gaga@gmail.com", "asdfas");
+
+        Media m1 = new Media(2346789, "Antonio.jpg", "porno", MediaType.IMAGEN, u1);
+
+        Media m2 = new Media(2346789, "Borja.mp3", "cancion", MediaType.AUDIO, u2);
+
+
+        Media m3 = new Media(2346789, "Antonio.jpg", "porno", MediaType.IMAGEN, u1);
     }
 }

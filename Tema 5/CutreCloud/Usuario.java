@@ -13,11 +13,9 @@ public class Usuario {
     private static ArrayList<String> emails = new ArrayList<>();
 
     public Usuario(int id, String email, String password) {
-        id = comprobarId(id);
-        email = comprobarEmail(email);
+        this.id = comprobarId(id);
+        this.email = comprobarEmail(email);
         this.password = password;
-
-
     }
 
     public int getId() {
