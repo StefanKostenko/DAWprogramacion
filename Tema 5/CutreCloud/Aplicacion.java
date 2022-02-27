@@ -35,4 +35,30 @@ public class Aplicacion {
         }
     }
 
+    public void eliminarUsuarioEmail(String email){
+        for (Usuario itemUsuario : usuarios) {
+            if(itemUsuario.getEmail().equals(email)){
+                eliminarMediaUsuario(itemUsuario);
+                usuarios.remove(itemUsuario);
+                break;
+            }
+        }
+    }
+
+    /*
+    private void eliminarMediaUsuario(Usuario iUsuario){
+        iUsuario.getId();
+        if(iUsuario.getId() == ){
+
+        }
+    }
+    */
+
+    public void eliminarUsuarioDominio(String dominio){
+        for (Usuario itemUsuario : usuarios) {
+            if(itemUsuario.getEmail().endsWith(dominio)){
+                usuarios.remove(itemUsuario);
+            }
+        }
+    }
 }
