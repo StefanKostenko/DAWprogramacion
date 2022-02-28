@@ -2,7 +2,7 @@ package CutreCloud;
 
 import java.util.ArrayList;
 
-public class Media {
+public class Media implements ParseXML{
     
     private int id;
     private String nombre;
@@ -76,4 +76,15 @@ public class Media {
         return nombre;
     }
 
+    public String generateXML(){
+        String xml = "";
+        xml += "<usuario>\n";
+        xml += "<id> " + id + "</id>\n";
+        xml += "<nombre> " + nombre + "</nombre>\n";
+        xml += "<contenido> " + contenido + "</contenido>\n";
+        xml += "<tipo> " + tipo + "</tipo>\n";
+        xml += "<usuario_id> " + usuario_id + "</usuario_id>\n";
+        xml += "</usuario>";
+        return xml;
+    }
 }

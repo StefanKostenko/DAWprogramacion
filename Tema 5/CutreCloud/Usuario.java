@@ -3,7 +3,7 @@ package CutreCloud;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class Usuario {
+public class Usuario implements ParseXML {
     
     private int id;
     private String email;
@@ -79,5 +79,13 @@ public class Usuario {
         return id;
     }
 
-
+    public String generateXML(){
+        String xml = "";
+        xml += "<usuario>\n";
+        xml += "<id> " + id + "</id>\n";
+        xml += "<email> " + email + "</email>\n";
+        xml += "<password> " + password + "</password>\n";
+        xml += "</usuario>";
+        return xml;
+    }
 }
