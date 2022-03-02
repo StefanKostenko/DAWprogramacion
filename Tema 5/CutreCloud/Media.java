@@ -79,11 +79,11 @@ public class Media implements ParseXML{
     public String generateXML(){
         String xml = "";
         xml += "<usuario>\n";
-        xml += "<id> " + id + "</id>\n";
-        xml += "<nombre> " + nombre + "</nombre>\n";
-        xml += "<contenido> " + contenido + "</contenido>\n";
-        xml += "<tipo> " + tipo + "</tipo>\n";
-        xml += "<usuario_id> " + usuario_id + "</usuario_id>\n";
+        xml += "<id> " + this.id + "</id>\n";
+        xml += "<nombre> " + this.nombre + "</nombre>\n";
+        xml += "<contenido> " + this.contenido + "</contenido>\n";
+        xml += "<tipo> " + this.tipo + "</tipo>\n";
+        xml += "<usuario_id> " + usuario_id.generateXML() + "</usuario_id>\n";
         xml += "</usuario>";
         return xml;
     }

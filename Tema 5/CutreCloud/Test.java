@@ -23,5 +23,10 @@ public class Test {
         a1.addFilesMedia(m3);
 
         a1.eliminarTodos(MediaType.IMAGEN);
+
+        System.out.println("----Usuario----");
+        System.out.println(u2.generateXML());
+        System.out.println("----Media----");
+        System.out.println(m1.generateXML());
     }
 }

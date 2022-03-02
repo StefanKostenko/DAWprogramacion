@@ -82,9 +82,9 @@ public class Usuario implements ParseXML {
     public String generateXML(){
         String xml = "";
         xml += "<usuario>\n";
-        xml += "<id> " + id + "</id>\n";
-        xml += "<email> " + email + "</email>\n";
-        xml += "<password> " + password + "</password>\n";
+        xml += "<id> " + this.id + "</id>\n";
+        xml += "<email> " + this.email + "</email>\n";
+        xml += "<password> " + this.password + "</password>\n";
         xml += "</usuario>";
         return xml;
     }
