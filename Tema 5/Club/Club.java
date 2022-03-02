@@ -1,6 +1,7 @@
 package Club;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Store details of club memberships.
@@ -30,7 +31,7 @@ public class Club
      */
     public void join(Membership member)
     {
-
+        miembrosClub.add(member);
     }
 
     /**
@@ -42,6 +43,11 @@ public class Club
         return miembrosClub.size();
     }
 
+    /**
+     * Determinar el numero de miembros que se han unido en el mes indicado.
+     * @param month El mes que nos interesa.
+     * @return El numero de miembros que se han unido ese mes.
+     */
     public int joinedInMonth(int month){
         int contadorMiembros = 0;
         
@@ -57,5 +63,15 @@ public class Club
         return contadorMiembros;
     }
 
-    
+    public void purge(int month){
+        Iterator<Membership> it = miembrosClub.iterator();
+
+        while(it.hasNext()){
+            Membership miembro = it.next();
+
+            if(miembro.getMonth() == month){
+                it.remove();
+            }
+        }
+    }
 }
