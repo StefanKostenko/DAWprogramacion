@@ -83,7 +83,7 @@ public class Media implements ParseXML{
         xml += "<nombre> " + this.nombre + "</nombre>\n";
         xml += "<contenido> " + this.contenido + "</contenido>\n";
         xml += "<tipo> " + this.tipo + "</tipo>\n";
-        xml += "<usuario_id> " + usuario_id.generateXML() + "</usuario_id>\n";
+        xml += "<usuario_id>\n" + usuario_id.generateXML() + "\n</usuario_id>\n";
         xml += "</usuario>";
         return xml;
     }
