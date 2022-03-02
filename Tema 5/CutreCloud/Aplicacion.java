@@ -38,26 +38,34 @@ public class Aplicacion {
     public void eliminarUsuarioEmail(String email){
         for (Usuario itemUsuario : usuarios) {
             if(itemUsuario.getEmail().equals(email)){
-                eliminarMediaUsuario(itemUsuario);
+                eliminarMediaUsuario(itemUsuario.getId());
                 usuarios.remove(itemUsuario);
                 break;
             }
         }
     }
 
-    /*
-    private void eliminarMediaUsuario(Usuario iUsuario){
-        iUsuario.getId();
-        if(iUsuario.getId() == ){
+    private void eliminarMediaUsuario(int id){
+        Iterator<Usuario> it = usuarios.iterator();
 
+        while(it.hasNext()){
+            Usuario usuario = it.next();
+
+            if(usuario.getId() == id){
+                it.remove();
+            }
         }
+        
     }
-    */
 
     public void eliminarUsuarioDominio(String dominio){
-        for (Usuario itemUsuario : usuarios) {
-            if(itemUsuario.getEmail().endsWith(dominio)){
-                usuarios.remove(itemUsuario);
+        Iterator<Usuario> it = usuarios.iterator();
+        
+        while(it.hasNext()){
+            Usuario usuario = it.next();
+
+            if(usuario.getEmail().endsWith(dominio)){
+                it.remove();
             }
         }
     }
