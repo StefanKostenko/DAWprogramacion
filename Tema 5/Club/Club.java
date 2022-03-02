@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Club
 {
     
-    private static ArrayList<Club> miembrosClub = new ArrayList<>();
+    private static ArrayList<Membership> miembrosClub = new ArrayList<>();
     
     // Define any necessary fields here ...
     
@@ -30,7 +30,7 @@ public class Club
      */
     public void join(Membership member)
     {
-        
+
     }
 
     /**
@@ -41,4 +41,21 @@ public class Club
     {
         return miembrosClub.size();
     }
+
+    public int joinedInMonth(int month){
+        int contadorMiembros = 0;
+        
+        if(month > 1 && month < 12){
+            for (Membership itemMember : miembrosClub) {
+                if(itemMember.getMonth() == month){
+                    contadorMiembros++;
+                }
+            }
+        }else{
+            System.out.println("El mes sale del rango del permitido el minimo es 1 y el maximo es el 12");
+        }
+        return contadorMiembros;
+    }
+
+    
 }
