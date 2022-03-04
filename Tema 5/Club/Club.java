@@ -62,7 +62,9 @@ public class Club
         return contadorMiembros;
     }
 
-    public void purge(int month){
+    public int purge(int month){
+        int eliminados = 0;
+
         Iterator<Membership> it = miembrosClub.iterator();
 
         while(it.hasNext()){
@@ -70,7 +72,10 @@ public class Club
 
             if(miembro.getMonth() == month){
                 it.remove();
+                eliminados++;
             }
         }
+
+        return eliminados;
     }
 }
