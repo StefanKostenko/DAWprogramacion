@@ -1,5 +1,8 @@
 package CutreCloud;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class Media implements ParseXML{
@@ -86,5 +89,26 @@ public class Media implements ParseXML{
         xml += "<usuario_id>\n" + usuario_id.generateXML() + "\n</usuario_id>\n";
         xml += "</usuario>";
         return xml;
+    }
+
+    public void writeXML(){
+        
+        try{
+        String ruta = "/home/alumno/DAWprogramacion/Tema 5/CutreCloud/Generador de XML/MediaXML.xml";
+
+        File file = new File(ruta);
+
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        FileWriter fw = new FileWriter(file);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(generateXML());
+        bw.close();            
+
+        }catch(Exception error){
+            error.printStackTrace();
+        }
     }
 }

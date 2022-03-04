@@ -28,5 +28,9 @@ public class Test {
         System.out.println(u2.generateXML());
         System.out.println("----Media----");
         System.out.println(m1.generateXML());
+
+        m1.writeXML();
+        m2.writeXML();
+        u1.writeXML();
     }
 }

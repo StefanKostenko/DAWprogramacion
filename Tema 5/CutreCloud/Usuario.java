@@ -1,5 +1,8 @@
 package CutreCloud;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -87,5 +90,26 @@ public class Usuario implements ParseXML {
         xml += "<password> " + this.password + "</password>\n";
         xml += "</usuario>";
         return xml;
+    }
+
+    public void writeXML(){
+        
+        try{
+        String ruta = "/home/alumno/DAWprogramacion/Tema 5/CutreCloud/Generador de XML/UsuarioXML.xml";
+
+        File file = new File(ruta);
+
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+
+        FileWriter fw = new FileWriter(file);
+        BufferedWriter bw = new BufferedWriter(fw);
+        bw.write(generateXML());
+        bw.close();            
+
+        }catch(Exception error){
+            error.printStackTrace();
+        }
     }
 }
