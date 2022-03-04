@@ -51,7 +51,7 @@ public class Club
     public int joinedInMonth(int month){
         int contadorMiembros = 0;
         
-        if(month > 1 && month < 12){
+        if(month >= 1 && month <= 12){
             for (Membership itemMember : miembrosClub) {
                 if(itemMember.getMonth() == month){
                     contadorMiembros++;
