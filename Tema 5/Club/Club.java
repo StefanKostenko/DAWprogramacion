@@ -12,7 +12,7 @@ import java.util.Iterator;
 public class Club
 {
     
-    private static ArrayList<Membership> miembrosClub = new ArrayList<>();
+    private ArrayList<Membership> miembrosClub;
     
     // Define any necessary fields here ...
     
@@ -21,8 +21,7 @@ public class Club
      */
     public Club()
     {
-        // Initialise any fields here ...
-        
+        miembrosClub = new ArrayList<>();        
     }
 
     /**
@@ -51,7 +50,7 @@ public class Club
     public int joinedInMonth(int month){
         int contadorMiembros = 0;
         
-        if(month >= 1 && month <= 12){
+        if(month > 1 && month < 12){
             for (Membership itemMember : miembrosClub) {
                 if(itemMember.getMonth() == month){
                     contadorMiembros++;
