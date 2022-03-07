@@ -3,10 +3,10 @@ package CutreCloud;
 public class Test {
     public static void main(String[] args) {
         
-        Usuario u1 = new Usuario(123, "gaga@gmail.com", "fsafas");
-        Usuario u2 = new Usuario(43, "fghd@gmail.com", "djkfghks");
-        Usuario u3 = new Usuario(124, "gfh@tata.com", "dfjgl");
-        Usuario u4 = new Usuario(123, "gaga@gmail.com", "asdfas");
+        Usuario u1 = new Usuario("gaga@gmail.com", "fsafas");
+        Usuario u2 = new Usuario("fghd@gmail.com", "djkfghks");
+        Usuario u3 = new Usuario("gfh@tata.com", "dfjgl");
+        Usuario u4 = new Usuario("gaga@gmail.com", "asdfas");
 
         Media m1 = new Media(2346789, "Antonio.jpg", "imagen", MediaType.IMAGEN, u1);
 
@@ -29,8 +29,11 @@ public class Test {
         System.out.println("----Media----");
         System.out.println(m1.generateXML());
 
+        u1.writeXML();
+        u4.writeXML();
+        u2.writeXML();
+
         m1.writeXML();
         m2.writeXML();
-        u1.writeXML();
     }
 }

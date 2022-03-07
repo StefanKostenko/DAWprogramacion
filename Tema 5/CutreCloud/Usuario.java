@@ -12,21 +12,19 @@ public class Usuario implements ParseXML {
     private String email;
     private String password;
 
+    private static int idGenerator = 0;
+
     private static ArrayList<Integer> ids = new ArrayList<>();
     private static ArrayList<String> emails = new ArrayList<>();
 
-    public Usuario(int id, String email, String password) {
-        this.id = comprobarId(id);
+    public Usuario(String email, String password) {
         this.email = comprobarEmail(email);
         this.password = password;
+        this.id = idGenerator++;
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getEmail() {
@@ -64,24 +62,6 @@ public class Usuario implements ParseXML {
         return email;
     }
 
-    private int comprobarId(int id){
-
-        if(ids.size() == 0){
-            ids.add(id);
-        }else{
-            for (Integer itemId : ids) {
-                if(ids.contains(id)){
-                    System.out.println("El id ya existe!");
-                    break;
-                }else{
-                    ids.add(id);
-                    break;
-                }
-            }
-        }
-        return id;
-    }
-
     public String generateXML(){
         String xml = "";
         xml += "<usuario>\n";
@@ -93,9 +73,9 @@ public class Usuario implements ParseXML {
     }
 
     public void writeXML(){
-        
+
         try{
-        String ruta = "/home/alumno/DAWprogramacion/Tema 5/CutreCloud/Generador de XML/UsuarioXML.xml";
+        String ruta = "/home/alumno/DAWprogramacion/Tema 5/CutreCloud/Usuarios/Usuario" + id + ".xml";
 
         File file = new File(ruta);
 
