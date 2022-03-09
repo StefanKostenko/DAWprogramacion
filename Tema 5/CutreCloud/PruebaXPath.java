@@ -19,7 +19,7 @@ public class PruebaXPath {
         // Carga del documento xml
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document documento = builder.parse(new File("/home/alumno/DAWprogramacion/Tema 5/CutreCloud/Usuarios/Usuario0.xml"));
+        Document documento = builder.parse(new File("../Usuarios/Usuario0.xml"));
 
         // Preparación de xpath
         XPath xpath = XPathFactory.newInstance().newXPath();
