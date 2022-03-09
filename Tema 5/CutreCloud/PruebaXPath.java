@@ -28,7 +28,7 @@ public class PruebaXPath {
         File[] lista = carpeta.listFiles();
         int archivos = lista.length;
 
-        for (int i = 0; i < archivos -1; i++) {
+        for (int i = 0; i <= archivos -1; i++) {
             Aplicacion a1 = new Aplicacion();
         
             String email = "";

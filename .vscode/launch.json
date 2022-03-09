@@ -9,6 +9,13 @@
             "name": "Launch PruebaXPath",
             "request": "launch",
             "mainClass": "CutreCloud.PruebaXPath",
+            "projectName": "DAWprogramacion_ff208a38"
+        },
+        {
+            "type": "java",
+            "name": "Launch PruebaXPath",
+            "request": "launch",
+            "mainClass": "CutreCloud.PruebaXPath",
             "projectName": "DAWprogramacion_c4bffbb2"
         },
         {
