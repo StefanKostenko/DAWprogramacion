@@ -2,6 +2,7 @@ package CutreCloud;
 
 import java.util.*;
 
+
 public class UsuarioInput {
 
     private static int opcion = 0;
@@ -54,4 +55,5 @@ public class UsuarioInput {
         System.out.println("->");
         opcion = lector.nextInt();
     }
+
 }

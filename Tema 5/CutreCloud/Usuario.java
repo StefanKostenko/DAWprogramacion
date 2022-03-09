@@ -5,6 +5,13 @@ import java.io.File;
 import java.io.FileWriter;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileNotFoundException;
+
+
+Fuente: https://www.iteramos.com/pregunta/9329/como-leer-xml-con-xpath-en-java
 
 public class Usuario implements ParseXML {
     
@@ -75,7 +82,7 @@ public class Usuario implements ParseXML {
     public void writeXML(){
 
         try{
-        String ruta = "Tema 5/CutreCloud/Usuarios/Usuario" + id + ".xml";
+        String ruta = "../Usuarios/Usuario" + id + ".xml";
 
         File file = new File(ruta);
 
@@ -92,4 +99,27 @@ public class Usuario implements ParseXML {
             error.printStackTrace();
         }
     }
+/*
+    public static void crearObjetosXML() {
+        try {
+            BufferedReader lector = new BufferedReader(new FileReader("Tema 5/CutreCloud/Usuarios/Usuario0.xml"));
+            StringBuilder cadena = new StringBuilder();
+            String line = null;
+          
+            while ((line = lector.readLine()) != null) {
+              cadena.append(line);
+            
+            }
+            lector.close();
+            String contenido = cadena.toString();
+            System.out.println(contenido);
+          } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+          } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+          }
+    }
+    */
 }

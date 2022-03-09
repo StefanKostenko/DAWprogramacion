@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PruebaXPath",
+            "request": "launch",
+            "mainClass": "CutreCloud.PruebaXPath",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch UsuarioInput",
             "request": "launch",
             "mainClass": "CutreCloud.UsuarioInput",
