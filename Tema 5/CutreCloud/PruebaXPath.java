@@ -7,7 +7,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
-import javax.xml.*;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -15,6 +14,11 @@ import org.w3c.dom.NodeList;
 
 public class PruebaXPath {
     public static void main(String[] args) throws Exception {
+        Aplicacion a1 = new Aplicacion();
+        
+        String email = "";
+        String password = "";
+        
         // La expresion xpath de busqueda
         String xPathExpression = "//usuario/*";
 
@@ -28,9 +32,21 @@ public class PruebaXPath {
 
         // Consultas
         NodeList nodos = (NodeList) xpath.evaluate(xPathExpression, documento, XPathConstants.NODESET);
+        
         for (int i = 0; i < nodos.getLength(); i++) {
             Node node = nodos.item(i);
-            System.out.println(node.getTextContent());
+            if(i == 1){
+                email = node.getTextContent();
+            }else if(i == 2){
+                password = node.getTextContent();
+            }
         }
+
+        Usuario u = new Usuario(email, password);
+
+        a1.addUsuario(u);
+
+        System.out.println(u.generateXML());
+        
     }
 }
