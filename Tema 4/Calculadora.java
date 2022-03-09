@@ -6,7 +6,7 @@ public class Calculadora {
         
         String[] operacionSeparada = Utilidades.dividirEnPalabras(operacion);
 
-        for (int i = 0; i < operacion.length; i++){
+        for (int i = 0; i < operacion.length(); i++){
             
         }
     }

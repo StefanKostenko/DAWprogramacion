@@ -69,4 +69,7 @@ public class Utilidades {
 			}
 		}
 	}
+
+    public static void mostrarArray(int[] numeros) {
+    }
 }

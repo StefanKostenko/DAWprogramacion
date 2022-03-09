@@ -100,7 +100,7 @@ public class TicketMachine {
     }
 
     public void showPrice(){
-        System.out.println("The price of the ticket is " + price " cents.");
+        System.out.println("The price of the ticket is " + price + " cents.");
     }
 
     public void empty(){
