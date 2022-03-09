@@ -96,7 +96,7 @@ public class Media implements ParseXML{
     public void writeXML(){
         
         try{
-        String ruta = "/home/alumno/DAWprogramacion/Tema 5/CutreCloud/Medias/Media" + contadorMedia + ".xml";
+        String ruta = "Tema 5/CutreCloud/Medias/Media" + contadorMedia + ".xml";
 
         File file = new File(ruta);
 
