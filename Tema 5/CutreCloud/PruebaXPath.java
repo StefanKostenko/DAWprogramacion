@@ -7,8 +7,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
+import javax.xml.*;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class PruebaXPath {
@@ -19,12 +21,16 @@ public class PruebaXPath {
         // Carga del documento xml
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();
-        Document documento = builder.parse(new File("../Usuarios/Usuario0.xml"));
+        Document documento = builder.parse(new File("Tema 5/CutreCloud/Usuarios/Usuario0.xml"));
 
         // Preparación de xpath
         XPath xpath = XPathFactory.newInstance().newXPath();
 
         // Consultas
         NodeList nodos = (NodeList) xpath.evaluate(xPathExpression, documento, XPathConstants.NODESET);
+        for (int i = 0; i < nodos.getLength(); i++) {
+            Node node = nodos.item(i);
+            System.out.println(node.getTextContent());
+        }
     }
 }
