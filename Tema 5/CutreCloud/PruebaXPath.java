@@ -6,14 +6,9 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class PruebaXPath {
@@ -29,36 +24,21 @@ public class PruebaXPath {
         
             String email = "";
             String password = "";
-            
-            // La expresion xpath de busqueda
-            String xPathExpression = "//usuario/*";
 
             // Carga del documento xml
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document documento = builder.parse(new File("Tema 5/CutreCloud/Usuarios/Usuario" + i + ".xml"));
+            Usuario newUser = null;
 
-            // Preparación de xpath
-            XPath xpath = XPathFactory.newInstance().newXPath();
+            email = documento.getElementsByTagName("email").item(0).getTextContent();
+            password = documento.getElementsByTagName("password").item(0).getTextContent();
 
-            // Consultas
-            NodeList nodos = (NodeList) xpath.evaluate(xPathExpression, documento, XPathConstants.NODESET);
-            
-            for (int j = 0; j < nodos.getLength(); j++) {
-                Node node = nodos.item(j);
-                if(j == 1){
-                    email = node.getTextContent();
-                }else if(j == 2){
-                    password = node.getTextContent();
-                }
-            }
+            newUser = new Usuario(email, password);
 
-            Usuario u = new Usuario(email, password);
+            a1.addUsuario(newUser);
 
-            a1.addUsuario(u);
-
-            System.out.println(u.generateXML());
-            
+            System.out.println(newUser.generateXML());
         }
     }
         
