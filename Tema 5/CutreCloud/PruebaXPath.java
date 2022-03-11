@@ -17,12 +17,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class PruebaXPath {
-    public static void main(String[] args) throws Exception {
-        
-        crearUsuariosDeXML();
-    }
 
-    private static void crearUsuariosDeXML()
+    public static void crearUsuariosDeXML()
             throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
         File carpeta = new File("Tema 5/CutreCloud/Usuarios"); 
         File[] lista = carpeta.listFiles();
