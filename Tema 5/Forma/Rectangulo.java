@@ -35,7 +35,7 @@ public class Rectangulo extends Forma {
         int LadoMenor = getLadoMenor()*procentaje;
 
         setLadoMayor(LadoMayor);
-        setLadoMenor(LadoMenor);
+        setLadoMenor(La);
     }
 
     //Getters y Setters
