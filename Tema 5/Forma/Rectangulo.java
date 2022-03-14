@@ -4,61 +4,62 @@ import java.awt.Point;
 
 public class Rectangulo extends Forma {
 
-    private static int LadoMenor;
-    private static int LadoMayor;
+    private static double LadoMenor;
+    private static double LadoMayor;
 
-    public Rectangulo(String color, Point centroDelObjeto, String nombre, int ladoMenor, int ladoMayor) {
-        super(color, centroDelObjeto, nombre);
-        this.LadoMenor = ladoMenor;
-        this.LadoMayor = ladoMayor;
+    public Rectangulo(String color, int x, int y, String nombre, double LadoMayor, double LadoMenor) {
+        super(color, x, y, nombre);
+        this.LadoMenor = LadoMenor;
+        this.LadoMayor = LadoMayor;
     }
 
     //Calcular el área
-    private static void areaRectangulo(){
-        int areaRectangulo;
+    public void areaRectangulo(){
+        double areaRectangulo;
 
         areaRectangulo = LadoMayor*LadoMenor;
 
         System.out.println(areaRectangulo);
     }
 
-    private static void perímetro(){
-        int perímetroRectangulo;
+    public void perímetro(){
+        double perímetroRectangulo;
 
         perímetroRectangulo = (LadoMayor * 2) + (LadoMenor * 2);
 
         System.out.println(perímetroRectangulo);
     }
 
-    private static void cambiarTamaño(int procentaje){
-        int LadoMayor = getLadoMayor()*procentaje;
-        int LadoMenor = getLadoMenor()*procentaje;
+    public void cambiarTamaño(double procentaje){
+        double LadoMayor = getLadoMayor()*procentaje;
+        double LadoMenor = getLadoMenor()*procentaje;
 
         setLadoMayor(LadoMayor);
-        setLadoMenor(La);
+        setLadoMenor(LadoMenor);
     }
 
     //Getters y Setters
-    public static int getLadoMenor() {
+    public static double getLadoMenor() {
         return LadoMenor;
     }
 
-    public static void setLadoMenor(int ladoMenor) {
+    public static void setLadoMenor(double ladoMenor) {
         LadoMenor = ladoMenor;
     }
 
-    public static int getLadoMayor() {
+    public static double getLadoMayor() {
         return LadoMayor;
     }
 
-    public static void setLadoMayor(int ladoMayor) {
+    public static void setLadoMayor(double ladoMayor) {
         LadoMayor = ladoMayor;
     }
 
     //Imprimir
-    @Override
-    public String toString() {
-        return "Rectangulo [LadoMayor=" + LadoMayor + ", LadoMenor=" + LadoMenor + "]";
+    public void Imprimir() {
+        super.Imprimir();
+        System.out.println("Lado Menor: " + LadoMenor);
+        System.out.println("Lado Mayor: " + LadoMayor);
     }
 
 }

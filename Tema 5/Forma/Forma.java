@@ -2,16 +2,14 @@ package Forma;
 
 import java.awt.Point; 
 
-
-
 public class Forma {
     private String color;
     private Point centroDelObjeto = new Point();
     private String nombre;
 
-    public Forma(String color, Point centroDelObjeto, String nombre) {
+    public Forma(String color, int x, int y, String nombre) {
         this.color = color;
-        this.centroDelObjeto = centroDelObjeto;
+        this.centroDelObjeto = new Point(x, y);
         this.nombre = nombre;
     }
 
@@ -36,10 +34,13 @@ public class Forma {
         return nombre;
     }
 
-    //toString
-    @Override
-    public String toString() {
-        return "Forma [centroDelObjeto=" + centroDelObjeto + ", color=" + color + ", nombre=" + nombre + "]";
+    public void mover(int x, int y){
+        this.centroDelObjeto = new Point(x,y);
+    }
+
+    //Imprimir
+    public void Imprimir() {
+        System.out.println("Color: " + color + " Centro del objeto: " + centroDelObjeto + "nombre: " + nombre);
     }
 
 }
