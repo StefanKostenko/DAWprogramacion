@@ -2,9 +2,11 @@ package RPG.Character.Stat;
 
 public class Intelligence extends Stat{
 
-    public Intelligence(int value) {
+    private int intelligence;
+
+    public Intelligence(int value, int intelligence) {
         super(value);
-        //TODO Auto-generated constructor stub
+        this.intelligence = intelligence;
     }
     
 }

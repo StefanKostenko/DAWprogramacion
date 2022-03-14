@@ -2,9 +2,11 @@ package RPG.Character.Stat;
 
 public class Dexterity extends Stat {
 
-    public Dexterity(int value) {
+    private int dexterity;
+
+    public Dexterity(int value, int dexterity) {
         super(value);
-        //TODO Auto-generated constructor stub
+        this.dexterity = dexterity;
     }
     
 }

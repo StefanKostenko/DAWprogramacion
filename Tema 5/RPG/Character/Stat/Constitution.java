@@ -2,9 +2,11 @@ package RPG.Character.Stat;
 
 public class Constitution extends Stat {
 
-    public Constitution(int value) {
+    private int constitution;
+
+    public Constitution(int value, int constitution) {
         super(value);
-        //TODO Auto-generated constructor stub
+        this.constitution = constitution;
     }
     
 }
