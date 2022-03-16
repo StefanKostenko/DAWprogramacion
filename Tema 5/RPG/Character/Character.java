@@ -7,11 +7,12 @@ import RPG.Character.Stat.Dexterity;
 import RPG.Character.Stat.Intelligence;
 import RPG.Character.Stat.Strength;
 
-public class Character {
+public class Character implements IDamageable {
     
     private String name;
     private Race race;
     private Job job;
+    private double heal;
 
     private Strength strength;
     private Dexterity dexterity;
@@ -23,6 +24,7 @@ public class Character {
         this.name = name;
         this.race = race;
         this.job = job;
+        this.heal = 125.0;
         this.strength = new Strength(strength);
         this.dexterity = new Dexterity(dexterity);
         this.constitution = new Constitution(constitution);
@@ -37,6 +39,10 @@ public class Character {
     }
     public Job getJob() {
         return job;
+    }
+
+    public double getHeal() {
+        return heal;
     }
 
     //(Valor base Dexterity + bonif. raza + bonif.profesion)*2
@@ -56,5 +62,32 @@ public class Character {
     public String toString() {
         return "Character [constitution=" + constitution + ", dexterity=" + dexterity + ", intelligence=" + intelligence
                 + ", job=" + job + ", name=" + name + ", race=" + race + ", strength=" + strength + "]";
+    }
+
+    public double maxHealth(){
+        return (constitution.getValue() + race.modifier(constitution) + job.modifier(constitution)) * 25;
+    }
+
+    public double health(){
+        return heal;
+    }
+
+    @Override
+    public boolean isDead() {
+        if(heal < 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    @Override
+    public void receivesDamage(double amount) {
+        heal = heal - amount;
+    }
+
+    @Override
+    public void heals(double amount) {
+        heal = heal + amount;
     }
 }
