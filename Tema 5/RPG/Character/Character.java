@@ -24,7 +24,7 @@ public class Character implements IDamageable {
         this.name = name;
         this.race = race;
         this.job = job;
-        this.heal = 125.0;
+        this.heal = 250.0;
         this.strength = new Strength(strength);
         this.dexterity = new Dexterity(dexterity);
         this.constitution = new Constitution(constitution);
