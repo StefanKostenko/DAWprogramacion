@@ -41,15 +41,15 @@ public class Character {
 
     //(Valor base Dexterity + bonif. raza + bonif.profesion)*2
     public double velocity(){
-        return (dexterity.getValue() + race.modifier() + job.modifier()) * 2;
+        return (dexterity.getValue() + race.modifier(dexterity) + job.modifier(dexterity)) * 2.0f;
     }
     //(Valor base Strength + bonif. raza + bonif.profesion)*2
     public double power(){
-        return ;
+        return (strength.getValue() + race.modifier(strength) + job.modifier(strength)) * 2.0f;
     }
     //(Valor base Intelligence + bonif. raza + bonif.profesion)*2
     public double magic(){
-        return ;
+        return (intelligence.getValue() + race.modifier(intelligence) + job.modifier(intelligence)) * 2.0f;
     }
 
     @Override
