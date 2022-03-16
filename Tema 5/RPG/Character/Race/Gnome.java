@@ -1,18 +1,18 @@
 package RPG.Character.Race;
 
-import RPG.Character.Stat.Stat;
 import RPG.Character.Stat.*;
+import RPG.Character.Stat.Stat;
 
-public class Elf extends Race{
+public class Gnome extends Race{
 
     int resultado = 0;
 
     @Override
     public int modifier(Stat stat) {
         if(stat instanceof Dexterity){
-            resultado = 3;
+            resultado = 1;
         }else if(stat instanceof Constitution){
-            resultado = -1;
+            resultado = 1;
         }else if(stat instanceof Intelligence){
             resultado = 3;
         }

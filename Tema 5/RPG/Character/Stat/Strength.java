@@ -1,12 +1,9 @@
 package RPG.Character.Stat;
 
 public class Strength extends Stat{
-
-    private int strength;
     
-    public Strength(int value, int strength) {
+    public Strength(int value) {
         super(value);
-        this.strength = strength;
     }
     
 }

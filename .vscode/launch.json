@@ -8,6 +8,20 @@
             "type": "java",
             "name": "Launch test",
             "request": "launch",
+            "mainClass": "RPG.Character.Race.test",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArgumentosMain",
+            "request": "launch",
+            "mainClass": "ArgumentosMain",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
             "mainClass": "RPG.Character.Stat.test",
             "projectName": "DAWprogramacion_c4bffbb2"
         },
