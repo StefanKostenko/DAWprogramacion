@@ -12,7 +12,7 @@ public class Character implements IDamageable {
     private String name;
     private Race race;
     private Job job;
-    private double heal;
+    private double health;
 
     private Strength strength;
     private Dexterity dexterity;
@@ -24,7 +24,7 @@ public class Character implements IDamageable {
         this.name = name;
         this.race = race;
         this.job = job;
-        this.heal = 250.0;
+        this.health = 250.0;
         this.strength = new Strength(strength);
         this.dexterity = new Dexterity(dexterity);
         this.constitution = new Constitution(constitution);
@@ -42,7 +42,7 @@ public class Character implements IDamageable {
     }
 
     public double getHeal() {
-        return heal;
+        return health;
     }
 
     //(Valor base Dexterity + bonif. raza + bonif.profesion)*2
@@ -69,12 +69,12 @@ public class Character implements IDamageable {
     }
 
     public double health(){
-        return heal;
+        return health;
     }
 
     @Override
     public boolean isDead() {
-        if(heal < 0){
+        if(health < 0){
             return true;
         }else{
             return false;
@@ -83,11 +83,11 @@ public class Character implements IDamageable {
 
     @Override
     public void receivesDamage(double amount) {
-        heal = heal - amount;
+        health = health - amount;
     }
 
     @Override
     public void heals(double amount) {
-        heal = heal + amount;
+        health = health + amount;
     }
 }
