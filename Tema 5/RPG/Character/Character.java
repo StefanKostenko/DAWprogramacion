@@ -88,6 +88,15 @@ public class Character implements IDamageable {
 
     @Override
     public void heals(double amount) {
-        health = health + amount;
+        double curacionCompletada = 0;
+        if(health < 250){
+            curacionCompletada = health + amount;
+
+            if(curacionCompletada > 250){
+                health = 250;
+            }else{
+                health = curacionCompletada;
+            }
+        }
     }
 }
