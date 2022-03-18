@@ -6,6 +6,7 @@ import RPG.Character.Stat.Constitution;
 import RPG.Character.Stat.Dexterity;
 import RPG.Character.Stat.Intelligence;
 import RPG.Character.Stat.Strength;
+import RPG.Item.Food.IConsumable;
 
 public class Character implements IDamageable {
     
@@ -98,5 +99,9 @@ public class Character implements IDamageable {
                 health = curacionCompletada;
             }
         }
+    }
+
+    public void consumes(IConsumable consumable){
+        consumable.consumedBy(this);
     }
 }
