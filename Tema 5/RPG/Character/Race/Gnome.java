@@ -18,5 +18,10 @@ public class Gnome extends Race{
         }
         return resultado;
     }
+
+    @Override
+    public String toString() {
+        return "Gnome";
+    }
     
 }

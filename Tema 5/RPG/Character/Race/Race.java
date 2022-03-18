@@ -21,7 +21,7 @@ public abstract class Race {
 
     @Override
     public String toString() {
-        return "Race []";
+        return "Race";
     }
 
 }
