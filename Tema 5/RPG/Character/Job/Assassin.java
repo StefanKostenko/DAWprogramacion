@@ -18,5 +18,10 @@ public class Assassin extends Job{
         }
         return resultado;
     }
+
+    @Override
+    public String toString() {
+        return "Assassin";
+    }
     
 }

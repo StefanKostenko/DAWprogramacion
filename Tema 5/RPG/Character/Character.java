@@ -60,7 +60,7 @@ public class Character implements IDamageable {
 
     @Override
     public String toString() {
-        return "My name is " + name + ". I'm an " + race + job + " My stats are: " + strength + " Dexterity: " + dexterity + " Constitution: " + constitution + " Intelligence: " + intelligence + " Velocity: " + velocity() + " Power: " + power() + " Magic: " + magic() + " Health: " + health; 
+        return "My name is " + name + ". I'm an " + race + " " + job + " My stats are: " + strength + " Dexterity: " + dexterity + " Constitution: " + constitution + " Intelligence: " + intelligence + " Velocity: " + velocity() + " Power: " + power() + " Magic: " + magic() + " Health: " + health; 
     }
 
     public double maxHealth(){

@@ -18,5 +18,10 @@ public class Sorcerer extends Race {
         }
         return resultado;
     }
+
+    @Override
+    public String toString() {
+        return "Sorcerer";
+    }
     
 }
