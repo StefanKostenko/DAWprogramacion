@@ -22,8 +22,7 @@ public abstract class Stat {
 
     @Override
     public String toString() {
-        return "Stat []";
+        return " " + value;
     }
-
 
 }
