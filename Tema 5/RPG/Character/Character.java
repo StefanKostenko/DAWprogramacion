@@ -60,8 +60,7 @@ public class Character implements IDamageable {
 
     @Override
     public String toString() {
-        return "Character [constitution=" + constitution + ", dexterity=" + dexterity + ", intelligence=" + intelligence
-                + ", job=" + job + ", name=" + name + ", race=" + race + ", strength=" + strength + "]";
+        return "My name is " + name + ". I'm an " + race + job + " My stats are: " + strength + " Dexterity: " + dexterity + " Constitution: " + constitution + " Intelligence: " + intelligence + " Velocity: " + velocity() + " Power: " + power() + " Magic: " + magic() + " Health: " + health; 
     }
 
     public double maxHealth(){
@@ -84,6 +83,7 @@ public class Character implements IDamageable {
     @Override
     public void receivesDamage(double amount) {
         health = health - amount;
+        System.out.println(health);
     }
 
     @Override
