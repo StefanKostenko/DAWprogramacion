@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ejercicio1",
+            "request": "launch",
+            "mainClass": "SistemaDeArchivos.Ejercicio1.Ejercicio1",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch test",
             "request": "launch",
             "mainClass": "RPG.test",
