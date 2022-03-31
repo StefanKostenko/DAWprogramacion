@@ -9,6 +9,8 @@ public class Ejercicio1 {
     private static Scanner lector = new Scanner(System.in);
 
     private static void imprimirContenido() {
+        
+        File contenido[] = ruta.listFiles();
 
         int contador = 1;
 
@@ -32,17 +34,27 @@ public class Ejercicio1 {
     public static void main(String[] args) {
         int opcion = 0;
 
+        System.out.println("Lista de ficheros y directorios del directorio:" + ruta);
+        System.out.println("-------------------------------------------------");
+        imprimirContenido();
+        System.out.println("Introduce una opcion o (-1 para salir): ");
+        opcion = lector.nextInt();
+
         while(opcion != -1){
-            System.out.println("Lista de ficheros y directorios del directorio:" + ruta);
-            System.out.println("-------------------------------------------------");
-            imprimirContenido();
-            System.out.println("Introduce una opcion o (-1 para salir): ");
-            opcion = lector.nextInt();
     
-            if(opcion <= contenido.length){
+            if(opcion == 0){
+                ruta = ruta.getParentFile();
+                System.out.println("Lista de ficheros y directorios del directorio:" + ruta);
+                System.out.println("-------------------------------------------------");
+                imprimirContenido();
+            }else if(opcion <= contenido.length){
                 ruta = contenido[opcion-1];
+                System.out.println("Lista de ficheros y directorios del directorio:" + ruta);
+                System.out.println("-------------------------------------------------");
                 imprimirContenido();
             }
+            System.out.println("Introduce una opcion o (-1 para salir): ");
+            opcion = lector.nextInt();
         }
 
     }

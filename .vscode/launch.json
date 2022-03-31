@@ -9,6 +9,13 @@
             "name": "Launch Ejercicio1",
             "request": "launch",
             "mainClass": "SistemaDeArchivos.Ejercicio1.Ejercicio1",
+            "projectName": "DAWprogramacion_ff208a38"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio1",
+            "request": "launch",
+            "mainClass": "SistemaDeArchivos.Ejercicio1.Ejercicio1",
             "projectName": "DAWprogramacion_c4bffbb2"
         },
         {
