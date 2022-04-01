@@ -2,10 +2,7 @@ package SistemaDeArchivos.Ejercicio1;
 import java.io.File;
 import java.util.Scanner;
 
-public class Ejercicio1 {
-
-    private static File ruta = File.listRoots()[0];
-    private static Scanner lector = new Scanner(System.in);
+public class Ejercicio1 { 
 
     private static void imprimirContenido(File e) {
 
@@ -28,11 +25,18 @@ public class Ejercicio1 {
         }
     }
 
+    private static void mensajeDeRuta(File ruta) {
+        System.out.println("Lista de ficheros y directorios del directorio:" + ruta);
+        System.out.println("-------------------------------------------------");
+    }
+
     public static void main(String[] args) {
-        
+        File ruta = File.listRoots()[0];
+        Scanner lector = new Scanner(System.in);
+
         int opcion = 0;
 
-        mensajeDeRuta();
+        mensajeDeRuta(ruta);
         imprimirContenido(ruta);
         System.out.println("Introduce una opcion o (-1 para salir): ");
         opcion = lector.nextInt();
@@ -40,13 +44,21 @@ public class Ejercicio1 {
         while(opcion != -1){
     
             if(opcion == 0){
-                ruta = ruta.getParentFile();
-                mensajeDeRuta();
-                imprimirContenido(ruta);
+                if(ruta.getParentFile() != null){
+                    ruta = ruta.getParentFile();
+                    mensajeDeRuta(ruta);
+                    imprimirContenido(ruta);
+                }else{
+                    System.out.println("El directorio no tiene padre!");
+                }
             }else if(opcion <= ruta.listFiles().length){
-                ruta = ruta.listFiles()[opcion-1];
-                mensajeDeRuta();
-                imprimirContenido(ruta);
+                if(ruta.listFiles()[opcion-1].isDirectory() && ruta.listFiles()[opcion-1].canRead()){
+                    ruta = ruta.listFiles()[opcion-1];
+                    mensajeDeRuta(ruta);
+                    imprimirContenido(ruta);
+                }else{
+                    System.out.println("No se puede aceder es un fichero!");
+                }
             }else if(opcion > ruta.listFiles().length){
                 System.out.println("La opcion que ha elegido no esta dentro del rango!");
             }
@@ -56,8 +68,4 @@ public class Ejercicio1 {
 
     }
 
-    private static void mensajeDeRuta() {
-        System.out.println("Lista de ficheros y directorios del directorio:" + ruta);
-        System.out.println("-------------------------------------------------");
-    }
 }
