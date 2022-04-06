@@ -8,10 +8,7 @@ import java.io.PrintWriter;
 
 public class Mezcla {
 
-    File f1 = new File("Tema 6/f1.txt");
-    File f2 = new File("Tema 6/f2.txt");
-
-    public void mezcla() throws IOException{
+    public void mezcla(File f1, File f2) throws IOException{
         PrintWriter pw = new PrintWriter("Tema 6/mezcla.txt");
         
         BufferedReader br1 = new BufferedReader(new FileReader("Tema 6/f1.txt"));

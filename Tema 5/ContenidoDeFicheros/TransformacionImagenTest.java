@@ -4,7 +4,7 @@ import java.io.File;
 
 import java.io.IOException;
 
-public class Ejercicio2_1 {
+public class TransformacionImagenTest {
 
     public static void main(String[] args) throws IOException {
 
@@ -14,7 +14,7 @@ public class Ejercicio2_1 {
 
         ti.transformaNegativo(f);
 
-        //ti.transformaOscuro();
+        ti.transformaOscuro(f);
 
         //ti.transformaBlancoNegro();
 
