@@ -1,3 +1,5 @@
+package ContenidoDeFicheros;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -14,7 +16,7 @@ public class TransformaImagen {
 
         if(fEnt.exists() == false){    
             System.out.println("El fichero no existe!");
-        }   
+        }
 
 
     }
@@ -23,16 +25,22 @@ public class TransformaImagen {
 
         // Transformar a negativo y guardar como *_n.bmp
 
-        FileInputStream fNeg_in = new FileInputStream(file);
-        FileOutputStream fNeg_out = new FileOutputStream(getNombreSinExtension(file) + "_n.bmp");
+        FileInputStream reader = new FileInputStream(file);
+        FileOutputStream write = new FileOutputStream("Tema 5/ContenidoDeFicheros/" + getNombreSinExtension(file) + "_n.bmp");
 
-        byte[] buffer = new byte[54];
-        int num = fNeg_in.read(buffer);
-        while(num != -1){
-            fNeg_out.write(buffer,0,num);
+        byte[] contenido = new byte[54];
+
+        reader.read(contenido);
+        write.write(contenido);
+
+        int c = 0;
+
+        while(c != -1){
+            write.write(((char)(255 - c)));
+            c = reader.read();
         }
-        fNeg_in.close();
-        fNeg_out.close();
+        reader.close();
+        write.close();
     }
 
     public void transformaOscuro() throws IOException {
