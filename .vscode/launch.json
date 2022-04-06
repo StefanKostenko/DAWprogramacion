@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ejercicio2_1",
+            "request": "launch",
+            "mainClass": "ContenidoDeFicheros.Ejercicio2_1",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Ejercicio2",
             "request": "launch",
             "mainClass": "SistemaDeArchivos.Ejercicio2.Ejercicio2",
