@@ -43,19 +43,50 @@ public class TransformaImagen {
         write.close();
     }
 
-    public void transformaOscuro() throws IOException {
+    public void transformaOscuro(File file) throws IOException {
 
         // Transformar a una imagen más oscura y guardar como *_o.bmp
+        FileInputStream reader = new FileInputStream(file);
+        FileOutputStream write = new FileOutputStream("Tema 5/ContenidoDeFicheros/" + getNombreSinExtension(file) + "_o.bmp");
 
+        byte[] contenido = new byte[54];
+
+        reader.read(contenido);
+        write.write(contenido);
+
+        int c = 0;
+
+        while(c != -1){
+            write.write(((char)(c/2)));
+            c = reader.read();
+        }
+        reader.close();
+        write.close();
         
     }
 
     
 
-    public void transformaBlancoNegro() throws IOException {
+    public void transformaBlancoNegro(File file) throws IOException {
 
         // Transformar a una imagen en blanco y negro y guardar como *_bn.bmp
+        
+        FileInputStream reader = new FileInputStream(file);
+        FileOutputStream write = new FileOutputStream("Tema 5/ContenidoDeFicheros/" + getNombreSinExtension(file) + "_o.bmp");
 
+        byte[] contenido = new byte[54];
+
+        reader.read(contenido);
+        write.write(contenido);
+
+        int c = 0;
+
+        while(c != -1){
+            write.write(((char)(c/2)));
+            c = reader.read();
+        }
+        reader.close();
+        write.close();
     }
 
     private String getNombreSinExtension(File file) {
