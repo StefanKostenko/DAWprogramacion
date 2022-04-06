@@ -72,18 +72,29 @@ public class TransformaImagen {
         // Transformar a una imagen en blanco y negro y guardar como *_bn.bmp
         
         FileInputStream reader = new FileInputStream(file);
-        FileOutputStream write = new FileOutputStream("Tema 5/ContenidoDeFicheros/" + getNombreSinExtension(file) + "_o.bmp");
+        FileOutputStream write = new FileOutputStream("Tema 5/ContenidoDeFicheros/" + getNombreSinExtension(file) + "_bn.bmp");
 
         byte[] contenido = new byte[54];
 
         reader.read(contenido);
         write.write(contenido);
 
-        int c = 0;
+        int r = 0;
+        int g = 0;
+        int b = 0;
 
-        while(c != -1){
-            write.write(((char)(c/2)));
-            c = reader.read();
+        r = reader.read();
+        while(r != -1){
+            g = reader.read();
+            b = reader.read();
+
+            int mediaRGB = (r+g+b)/3;
+
+            write.write((char)mediaRGB);
+            write.write((char)mediaRGB);
+            write.write((char)mediaRGB);
+
+            r = reader.read();
         }
         reader.close();
         write.close();

@@ -16,7 +16,7 @@ public class TransformacionImagenTest {
 
         ti.transformaOscuro(f);
 
-        //ti.transformaBlancoNegro();
+        ti.transformaBlancoNegro(f);
 
     }
 
