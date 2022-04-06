@@ -5,7 +5,8 @@
         "Tema 3",
         "Tema 2",
         "Tema 1",
-        "Controles/Control 03"
+        "Controles/Control 03",
+        "Tema 6"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",

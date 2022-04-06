@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MezclaTest",
+            "request": "launch",
+            "mainClass": "MezclaTest",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch Ejercicio2_1",
             "request": "launch",
             "mainClass": "ContenidoDeFicheros.Ejercicio2_1",
