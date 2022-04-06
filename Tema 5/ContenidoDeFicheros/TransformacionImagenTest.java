@@ -18,6 +18,7 @@ public class TransformacionImagenTest {
 
         ti.transformaBlancoNegro(f);
 
+        ti.transformaSoloVerde(f);
     }
 
 }

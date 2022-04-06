@@ -100,6 +100,39 @@ public class TransformaImagen {
         write.close();
     }
 
+    public void transformaSoloVerde(File file) throws IOException {
+
+        // Transformar a una imagen en blanco y negro y guardar como *_bn.bmp
+        
+        FileInputStream reader = new FileInputStream(file);
+        FileOutputStream write = new FileOutputStream("Tema 5/ContenidoDeFicheros/" + getNombreSinExtension(file) + "_sv.bmp");
+
+        byte[] contenido = new byte[54];
+
+        reader.read(contenido);
+        write.write(contenido);
+
+        int r = 0;
+        int g = 0;
+        int b = 0;
+
+        r = reader.read();
+        while(r != -1){
+            g = reader.read();
+            b = reader.read();
+
+            int mediaRGB = (r+g+b)-g-b;
+
+            write.write((char)mediaRGB);
+            write.write((char)mediaRGB);
+            write.write((char)mediaRGB);
+
+            r = reader.read();
+        }
+        reader.close();
+        write.close();
+    }
+
     private String getNombreSinExtension(File file) {
 
         //Devuelve el nombre del archivo f sin extensión
