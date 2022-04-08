@@ -1,5 +1,7 @@
 package Primos;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -18,6 +20,19 @@ public class Primos {
 
         pw.close();
     }
+
+        public void muestraContenido() throws IOException { 
+            
+            String cadena; 
+            FileReader archivo = new FileReader("Tema 6/Primos/primos.dat");
+            BufferedReader br = new BufferedReader(archivo);
+
+            while((cadena = br.readLine())!=null) { 
+                System.out.println(cadena); 
+            }
+
+            br.close(); 
+        }
 
 
     public static boolean esPrimo(int numero) {

@@ -8,5 +8,7 @@ public class PrimosTest {
         Primos pr = new Primos();
 
         pr.escribirPrimos();
+
+        pr.muestraContenido();
     }
 }
