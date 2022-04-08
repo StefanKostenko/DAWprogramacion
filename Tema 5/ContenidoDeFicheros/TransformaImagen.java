@@ -100,6 +100,7 @@ public class TransformaImagen {
         write.close();
     }
 
+    /*
     public void transformaSoloVerde(File file) throws IOException {
 
         // Transformar a una imagen en blanco y negro y guardar como *_bn.bmp
@@ -131,7 +132,7 @@ public class TransformaImagen {
         }
         reader.close();
         write.close();
-    }
+    }*/
 
     private String getNombreSinExtension(File file) {
 
