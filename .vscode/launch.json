@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch EliminarComentariosTest",
+            "request": "launch",
+            "mainClass": "EliminarComentarios.EliminarComentariosTest",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch ContadorPalabrasTest",
             "request": "launch",
             "mainClass": "ContarPalabras.ContadorPalabrasTest",
