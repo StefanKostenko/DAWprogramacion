@@ -34,6 +34,7 @@ public class ContarPalabras {
         System.out.println("La palabra " + palabra + " se ha repetido " + contador + " veces.");
 
         lector.close();
+        archivo.close();
         br.close();
     }
 }
