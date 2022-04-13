@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class EliminarComentarios {
     
-    public void BorrarCOmentario() throws IOException{
+    public void borrarCOmentario() throws IOException{
         
         FileReader archivo = new FileReader("Tema 6/EliminarComentarios/Prueba.java");
         BufferedReader br = new BufferedReader(archivo);
@@ -15,14 +15,21 @@ public class EliminarComentarios {
         String principioDeLinea;
         int con = 0;
 
-        while((contenido = br.readLine())!=null){
+        while((contenido = br.readLine())!= null){
 
-            principioDeLinea = contenido.substring(0, 1);
+            contenido = contenido.replaceAll("\\s","");
 
-            if(principioDeLinea == "//"){
-                con++;
+            if(contenido.length() > 1){
+                principioDeLinea = contenido.substring(0, 2);
+            
+                if(principioDeLinea.equals("//")){
+                    con++;
+                }
             }
+            
         }
+
+        System.out.println(con);
 
         archivo.close();
         br.close();

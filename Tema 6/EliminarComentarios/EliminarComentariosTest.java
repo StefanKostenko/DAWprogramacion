@@ -8,6 +8,6 @@ public class EliminarComentariosTest {
 
         EliminarComentarios ec = new EliminarComentarios();
         
-        ec.BorrarCOmentario();
+        ec.borrarCOmentario();
     }
 }
