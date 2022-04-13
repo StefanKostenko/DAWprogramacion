@@ -8,6 +8,20 @@
             "type": "java",
             "name": "Launch Prueba",
             "request": "launch",
+            "mainClass": "EliminarComentarios_v2.Prueba",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch EliminarComentarios_v2Test",
+            "request": "launch",
+            "mainClass": "EliminarComentarios_v2.EliminarComentarios_v2Test",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
+            "name": "Launch Prueba",
+            "request": "launch",
             "mainClass": "EliminarComentarios.Prueba",
             "projectName": "DAWprogramacion_c4bffbb2"
         },
