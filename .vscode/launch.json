@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Prueba",
+            "request": "launch",
+            "mainClass": "EliminarComentarios.Prueba",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch EliminarComentariosTest",
             "request": "launch",
             "mainClass": "EliminarComentarios.EliminarComentariosTest",
