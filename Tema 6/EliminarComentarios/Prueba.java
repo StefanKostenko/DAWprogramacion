@@ -1,11 +1,7 @@
 package EliminarComentarios;
 
 public class Prueba {
-    /*
-    *
-    * Main
-    *
-    */
+    //Main
     public static void main(String[] args) {
         //Escribe hola mundo por terminal.
         System.out.println("Hola Mundo!");
