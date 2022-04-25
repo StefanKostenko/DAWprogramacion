@@ -10,39 +10,37 @@ public class EliminarComentarios {
     public void borrarCOmentario() throws IOException{
         
         FileReader archivo = new FileReader("Tema 6/EliminarComentarios/Prueba.java");
-        BufferedReader br = new BufferedReader(archivo);
-        PrintWriter pw = new PrintWriter("Tema 6/EliminarComentarios/PruebaSinComentarios.java");
+        BufferedReader lector = new BufferedReader(archivo);
+        PrintWriter escritor = new PrintWriter("Tema 6/EliminarComentarios/PruebaSinComentarios.java");
 
-        String linia;
-        String liniaSinEspacios;
+        String linea;
+        String lineaSinEspacios;
         String principioDeLinea;
 
-        while((linia = br.readLine())!= null){
+        while((linea = lector.readLine())!= null){
 
-            liniaSinEspacios = linia.replaceAll("\\s","");
+            lineaSinEspacios = linea.replaceAll("\\s","");
 
-            if(liniaSinEspacios.length() > 0){
+            if(lineaSinEspacios.length() > 0){
 
-                if(liniaSinEspacios.length() == 1){
-                    pw.println(linia);
+                if(lineaSinEspacios.length() == 1){
+                    escritor.println(linea);
                 }else{
-                    principioDeLinea = liniaSinEspacios.substring(0, 2);
+                    principioDeLinea = lineaSinEspacios.substring(0, 2);
             
                     if(principioDeLinea.equals("//")){
                     }else{
-                        pw.println(linia);
+                        escritor.println(linea);
                     }
                 }
             }else{
-                pw.println("");
+                escritor.println("");
             }
             
         }
 
-        pw.flush();
-
-        pw.close();
+        escritor.close();
         archivo.close();
-        br.close();
+        lector.close();
     }
 }
