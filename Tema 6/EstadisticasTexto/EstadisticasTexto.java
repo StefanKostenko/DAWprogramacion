@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.Normalizer;
 
 public class EstadisticasTexto {
     
@@ -24,21 +25,30 @@ public class EstadisticasTexto {
         double porcentajesTabuladores = 0;
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("Tema 6/EstadisticasTexto/Prueba"));
+			BufferedReader br = new BufferedReader(new FileReader("Tema 6/EstadisticasTexto/Prueba2"));
 			
 			String linea = br.readLine();
 
 			while (linea != null) {
+                linea = Normalizer.normalize(linea, Normalizer.Form.NFD)
+                .replaceAll("[\\u0300-\\u036f]", "")
+                .toLowerCase();
+
 				//Troceamos línea cortando donde haya espacios en blanco
 				String[] palabras = linea.split(" ");
 				//Acumulamos las palabras(trozos) obtenidos
 				contadorPalabras += palabras.length;
                 //Contar letras
-                contadorLetras += linea.length();
                 //Contar lineas del texto.
                 contadorLineas++;
 
                 char [] charsLine=linea.toCharArray();
+
+                for (int i = 0; i < charsLine.length; i++) {
+                    if(Character.isLetter(charsLine[i])){
+                        contadorLetras++;
+                    }
+                }
 
                 for (int i = 0; i < charsLine.length; i++) {
                     if(charsLine[i] == ' '){
