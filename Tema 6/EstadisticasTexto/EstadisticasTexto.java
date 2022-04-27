@@ -7,18 +7,56 @@ import java.io.IOException;
 
 public class EstadisticasTexto {
     
-    public void ContarPalabras(){
-        int contador = 0;
+    public void contador(){
+        //vocales a usar en la comparacion
+        char [] vowels={'a','e','i','o','u','A','E','I','O','U'};
+
+        double contadorPalabras = 0;
+        double contadorLetras = 0;
+        double contadorLineas = 0;
+        double contadorVocales = 0;
+        double contadorEspacios = 0;
+        double contadorTabulador = 0;
+
+        double porcentajesEspacios = 0;
+        double porcentajesVocales = 0;
+        double porcentajesConsonantes = 0;
+        double porcentajesTabuladores = 0;
+
 		try {
 			BufferedReader br = new BufferedReader(new FileReader("Tema 6/EstadisticasTexto/Prueba"));
 			
 			String linea = br.readLine();
+
 			while (linea != null) {
 				//Troceamos línea cortando donde haya espacios en blanco
 				String[] palabras = linea.split(" ");
 				//Acumulamos las palabras(trozos) obtenidos
-				contador += palabras.length;
-				//Leemos siguiente línea
+				contadorPalabras += palabras.length;
+                //Contar letras
+                contadorLetras += linea.length();
+                //Contar lineas del texto.
+                contadorLineas++;
+
+                char [] charsLine=linea.toCharArray();
+
+                for (int i = 0; i < charsLine.length; i++) {
+                    if(charsLine[i] == ' '){
+                        contadorEspacios++;
+                    }else if(charsLine[i] == '\t'){
+                        contadorTabulador++;
+                    }
+                }
+
+                for(int i=0;i<charsLine.length;i++){
+                    for(int j=0;j<vowels.length;j++){
+                        if(charsLine[i]==vowels[j]){
+                            //comparacion
+                            contadorVocales++;
+                        }
+                    }            
+                }
+                //Leemos siguiente línea
 				linea = br.readLine();
 			}
 			
@@ -29,6 +67,19 @@ public class EstadisticasTexto {
 			e.printStackTrace();
 		}
 		
-		System.out.println("\nPalabras contadas en el texto: " + contador);
+        porcentajesVocales =  (contadorVocales * 100.00)/contadorLetras ;
+        porcentajesEspacios = (contadorEspacios * 100.00) / contadorLetras;
+        porcentajesTabuladores = (contadorTabulador * 100.00) / contadorLetras;
+        porcentajesConsonantes = (((100.00 - porcentajesVocales) - porcentajesEspacios) - porcentajesTabuladores) ;
+
+		System.out.println("\nPalabras contadas en el texto: " + contadorPalabras);
+        System.out.println("Letras contadas en el texto: " + contadorLetras);
+        System.out.println("Lineas contadas en el texto: " + contadorLineas);
+        System.out.println("% de vocales: " + porcentajesVocales + "%");
+        System.out.println("% de consonantes: " + porcentajesConsonantes + "%");
+        System.out.println("% de espacios: " + porcentajesEspacios + "%");
+        System.out.println("% de tabuladores: " + porcentajesTabuladores + "%");
+
     }
+
 }
