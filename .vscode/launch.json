@@ -9,6 +9,13 @@
             "name": "Launch EstadisticasTextoTest",
             "request": "launch",
             "mainClass": "EstadisticasTexto.EstadisticasTextoTest",
+            "projectName": "DAWprogramacion_ff208a38"
+        },
+        {
+            "type": "java",
+            "name": "Launch EstadisticasTextoTest",
+            "request": "launch",
+            "mainClass": "EstadisticasTexto.EstadisticasTextoTest",
             "projectName": "DAWprogramacion_c4bffbb2"
         },
         {
