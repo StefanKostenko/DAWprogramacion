@@ -13,6 +13,7 @@ public class Test {
         pc.clientes.add(c1);
 
         pc.write();
+        pc.read();
         System.out.println(cl.toString());
     }
 }
