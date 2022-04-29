@@ -25,7 +25,7 @@ public class EstadisticasTexto {
         double porcentajesTabuladores = 0;
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("Tema 6/EstadisticasTexto/Prueba"));
+			BufferedReader br = new BufferedReader(new FileReader("Tema 6/EstadisticasTexto/Prueba2"));
 			
 			String linea = br.readLine();
 
