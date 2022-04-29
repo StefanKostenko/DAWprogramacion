@@ -1,0 +1,14 @@
+Crea una aplicacion con las siguientes caracteristicas:
+
+    Una clase persona con los atributos nif, nombre y apellidos.
+    Los atributos tienenque ser acesibles paras las clases hijas, y no acesible para el resto de clases.
+    El acceso a esos atributos se hace mediante setters y getters adecuados.
+
+    Una clase cliente que hereda de persona con los atributos id, nif, nombre, apellidos y email dicho atributos
+    no deben ser acesible fuera de la clase y dicho acesso sera mediante getters y setters apropiados.
+
+    Sobre escribe el metodo toString() para mostrar los atributos de forma tabular.
+
+    Crea una clase PersistenciaCliente con un metodo write que recibe una arryList de clientes de tal forma que escriben un fichero "clientes.dat"
+    todos los clientes recibidos en la arrayList. Cada cliente se escribe en una linea separados cada atributo en una coma.
+    Crear un metodo inverso read que recibe el nombre del fichero y devuelve una arrayList con los clientes que recibe.
