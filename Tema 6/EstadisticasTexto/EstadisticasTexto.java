@@ -25,7 +25,7 @@ public class EstadisticasTexto {
         double porcentajesTabuladores = 0;
 
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("Tema 6/EstadisticasTexto/Prueba2"));
+			BufferedReader br = new BufferedReader(new FileReader("Tema 6/EstadisticasTexto/Prueba"));
 			
 			String linea = br.readLine();
 
@@ -38,7 +38,6 @@ public class EstadisticasTexto {
 				String[] palabras = linea.split(" ");
 				//Acumulamos las palabras(trozos) obtenidos
 				contadorPalabras += palabras.length;
-                //Contar letras
                 //Contar lineas del texto.
                 contadorLineas++;
 
