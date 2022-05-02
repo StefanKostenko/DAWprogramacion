@@ -1,12 +1,12 @@
 package ControlFicheros;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
 
 
 public class PresistenciaCliente {
@@ -34,42 +34,33 @@ public class PresistenciaCliente {
         }
     }
 
-    public void read(){
-    
-    Scanner entrada;
-    File archivo;
-    String a;
-    String linea;
-   // ArrayList<Double> array = new ArrayList<Double>();
-    ArrayList<String> lista = new ArrayList<String>();
-    try
-    {
-        entrada = new Scanner("Tema 6/ControlFicheros/Clientes.dat");
-        a = entrada.nextLine();
-        archivo = new File(a);
-        entrada = new Scanner(archivo);
+    public ArrayList<Cliente> read() throws IOException{
 
-        int comienzo = 0;
-        while(entrada.hasNextLine() && comienzo < 100)
-        {
+        ArrayList<Cliente> resultado = new ArrayList<>();
 
-            linea = entrada.nextLine();
-           // System.out.println(linea);
-            lista.add(linea); //Agrega valor a ArrayList
-            comienzo++;
+        FileReader ficheroLectura;
+        BufferedReader lector;
+
+        try {
+            ficheroLectura = new FileReader("Tema 6/ControlFicheros/Clientes.dat");
+            lector = new BufferedReader(ficheroLectura);
+
+            String linea;
+
+            while ((linea = lector.readLine()) != null) {
+                String [] trozos = linea.split(",");
+                int idTrozeado = Integer.parseInt(trozos[0]);
+                Cliente cliente = new Cliente(idTrozeado, trozos[1], trozos[2], trozos[3], trozos[4]);
+                resultado.add(cliente);
+            }
+            
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
-        //Despues de agregar a ArrayList, ordena.
-        Collections.sort(lista);
-        //Ahora imprime los valores ordenados.
-        for(String valor: lista){
-            System.out.println(valor);
-        }
-
-    }
-        catch(Exception e){
-            System.out.println(e.getMessage());
-        }
+        return resultado;
     }
 }
 
