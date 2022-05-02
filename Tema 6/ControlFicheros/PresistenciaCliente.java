@@ -8,11 +8,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-import javax.swing.JOptionPane;
 
 public class PresistenciaCliente {
 
-    private ArrayList<Cliente> clientes;
+    ArrayList<Cliente> clientes;
 
     public PresistenciaCliente() {
         clientes = new ArrayList<>();
@@ -25,13 +24,13 @@ public class PresistenciaCliente {
             BufferedWriter bw = new BufferedWriter(new FileWriter("Tema 6/ControlFicheros/Clientes.dat"));
  
             for (Cliente e : clientes) {
-                String cliente = e.getId() + e.getNif() + e.getNombre() + e.getApellidos() + e.getEmail() + "\n";
+                String cliente = e.getId() + ", " + e.getNif() + ", " + e.getNombre() + ", " + e.getApellidos() + ", " + e.getEmail() + "\n";
                 bw.write(cliente);
             }
             bw.close();
-        } catch (Exception ex) {
+        } catch (IOException e) {
             //Captura un posible error le imprime en pantalla   
-            JOptionPane.showMessageDialog(null, ex.getMessage());
+            e.printStackTrace();
         }
     }
 
