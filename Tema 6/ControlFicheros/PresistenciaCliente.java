@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 public class PresistenciaCliente {
 
-    ArrayList<Cliente> clientes;
+    private ArrayList<Cliente> clientes;
 
     public PresistenciaCliente() {
         clientes = new ArrayList<>();
@@ -25,7 +25,7 @@ public class PresistenciaCliente {
             BufferedWriter bw = new BufferedWriter(new FileWriter("Tema 6/ControlFicheros/Clientes.dat"));
  
             for (Cliente e : clientes) {
-                String cliente = "ID " + e.getId() + ", NIF " + e.getNif() + ", nombre " + e.getNombre() + ", apellidos " + e.getApellidos() + ", email " + e.getEmail() + "\n";
+                String cliente = e.getId() + e.getNif() + e.getNombre() + e.getApellidos() + e.getEmail() + "\n";
                 bw.write(cliente);
             }
             bw.close();
