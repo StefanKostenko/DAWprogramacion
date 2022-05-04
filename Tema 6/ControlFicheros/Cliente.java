@@ -1,7 +1,8 @@
 package ControlFicheros;
 
-public class Cliente extends Persona{
+public class Cliente extends Persona {
     
+    private static final long serialVersionUID = 1L;
     private int id;
     private String email;
 

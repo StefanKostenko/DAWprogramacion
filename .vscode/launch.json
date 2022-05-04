@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ObjetosCliente",
+            "request": "launch",
+            "mainClass": "ControlFicheros.ObjetosCliente",
+            "projectName": "DAWprogramacion_608bdd91"
+        },
+        {
+            "type": "java",
             "name": "Launch Test",
             "request": "launch",
             "mainClass": "ControlFicheros.Test",
