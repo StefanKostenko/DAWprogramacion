@@ -18,6 +18,8 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 public class ObjetosCliente {
 
@@ -76,9 +78,22 @@ public class ObjetosCliente {
                 Element emp = doc.createElement("cliente");
                 emp.setAttribute("id", Integer.toString(c.getId()));
 
-                Element hijo = doc.createElement("nombre");
-                hijo.appendChild(doc.createTextNode(c.getNombre()));
-                emp.appendChild(hijo);
+
+                Element nif = doc.createElement("nif");
+                nif.appendChild(doc.createTextNode(c.getNif()));
+                emp.appendChild(nif);
+
+                Element nombre = doc.createElement("nombre");
+                nombre.appendChild(doc.createTextNode(c.getNombre()));
+                emp.appendChild(nombre);
+
+                Element apellidos = doc.createElement("apellidos");
+                apellidos.appendChild(doc.createTextNode(c.getApellidos()));
+                emp.appendChild(apellidos);
+
+                Element email = doc.createElement("email");
+                email.appendChild(doc.createTextNode(c.getEmail()));
+                emp.appendChild(email);
 
                 root.appendChild(emp);
             }
@@ -95,10 +110,32 @@ public class ObjetosCliente {
         
     }
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerException{
+    // Leer xml de objetos.
+
+    private static void leerClientesXML() throws ParserConfigurationException, SAXException, IOException{
+
+        Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(new FileInputStream("Tema 6/ControlFicheros/Clientes.xml"));
+        Element raiz = (Element) doc.getChildNodes().item(0);
+        NodeList clientes = raiz.getElementsByTagName("cliente");
+
+        for (int i = 0; i < clientes.getLength(); i++) {
+            Element el = (Element) clientes.item(i);
+            System.out.println(el.getNodeName() + " " + (i + 1));
+            System.out.println("\tid: " + el.getAttribute("id"));
+            System.out.println("\tnif: " + el.getElementsByTagName("nif").item(0).getTextContent());
+            System.out.println("\tnombre: " + el.getElementsByTagName("nombre").item(0).getTextContent());
+            System.out.println("\tapellidos: " + el.getElementsByTagName("apellidos").item(0).getTextContent());
+            System.out.println("\temail: " + el.getElementsByTagName("email").item(0).getTextContent());
+
+        }
+        System.out.println(raiz.getTextContent());
+    }
+
+    public static void main(String[] args) throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerException, SAXException{
         crearClientes();
         leerObjetos();
         crearClientesXML();
+        leerClientesXML();
     }
     
 }
