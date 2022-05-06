@@ -16,6 +16,9 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -131,11 +134,33 @@ public class ObjetosCliente {
         System.out.println(raiz.getTextContent());
     }
 
+    // Crear Clientes en JSON
+    private static void crearClientesJSON() throws IOException, ClassNotFoundException{
+    
+        ObjectInputStream lector = new ObjectInputStream(new FileInputStream("Tema 6/ControlFicheros/Clientes.json"));
+
+        Cliente c;
+        try{
+            while(true){
+                c = (Cliente) lector.readObject();
+
+                String cliente =  "{\"id\"" + c.getId() + ",\"nif\":\"" + c.getNif() + "\",\"nombre\":" + c.getNombre() + ", \"apellidos\":" + c.getApellidos() + ", \"email\":" + c.getEmail() + "}";
+                Gson gson = new Gson();
+                gson.toJson(cliente);
+            }
+        } catch (EOFException eof){
+            lector.close();
+        }
+
+    }
+    
+
     public static void main(String[] args) throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerException, SAXException{
         crearClientes();
         leerObjetos();
         crearClientesXML();
         leerClientesXML();
+        crearClientesJSON();
     }
     
 }
