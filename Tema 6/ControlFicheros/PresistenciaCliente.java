@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class PresistenciaCliente {
 
-    ArrayList<Cliente> clientes;
+    public static ArrayList<Cliente> clientes;
 
     public PresistenciaCliente() {
         clientes = new ArrayList<>();

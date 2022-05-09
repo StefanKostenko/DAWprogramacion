@@ -4,9 +4,11 @@ import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Writer;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -17,7 +19,7 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import com.google.gson.GsonBuilder;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -135,22 +137,16 @@ public class ObjetosCliente {
     }
 
     // Crear Clientes en JSON
-    private static void crearClientesJSON() throws IOException, ClassNotFoundException{
+    private static void crearClientesJSON() throws IOException{
     
-        ObjectInputStream lector = new ObjectInputStream(new FileInputStream("Tema 6/ControlFicheros/Clientes.obj"));
+        Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
+        ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream("Tema 6/ControlFicheros/Clientes.json"));
 
-        Cliente c;
-        try{
-            while(true){
-                c = (Cliente) lector.readObject();
-
-                String cliente =  "{\"id\"" + c.getId() + ",\"nif\":\"" + c.getNif() + "\",\"nombre\":" + c.getNombre() + ", \"apellidos\":" + c.getApellidos() + ", \"email\":" + c.getEmail() + "}";
-                Gson gson = new Gson();
-                gson.toJson(cliente);
-            }
-        } catch (EOFException eof){
-            lector.close();
+        for(Cliente cliente: PresistenciaCliente.clientes){
+            String prettyPrinting = prettyGson.toJson(cliente);
+            escritor.writeUTF(prettyPrinting);
         }
+        escritor.close();
 
     }
     
