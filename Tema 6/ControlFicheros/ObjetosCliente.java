@@ -137,7 +137,7 @@ public class ObjetosCliente {
     // Crear Clientes en JSON
     private static void crearClientesJSON() throws IOException, ClassNotFoundException{
     
-        ObjectInputStream lector = new ObjectInputStream(new FileInputStream("Tema 6/ControlFicheros/Clientes.json"));
+        ObjectInputStream lector = new ObjectInputStream(new FileInputStream("Tema 6/ControlFicheros/Clientes.obj"));
 
         Cliente c;
         try{
