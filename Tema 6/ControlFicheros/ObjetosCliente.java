@@ -1,12 +1,17 @@
 package ControlFicheros;
 
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -139,17 +144,35 @@ public class ObjetosCliente {
     // Crear Clientes en JSON
     private static void crearClientesJSON() throws IOException{
     
-        ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream("Tema 6/ControlFicheros/Clientes.json"));
+        PrintWriter writer = new PrintWriter("Tema 6/ControlFicheros/Clientes.json");
         Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
 
-        for(Cliente cliente: PresistenciaCliente.clientes){
-            String prettyPrinting = prettyGson.toJson(cliente);
-            writer.writeUTF(prettyPrinting);
+        writer.write("[");
+
+        for (int i = 0; i < PresistenciaCliente.clientes.size(); i++) {
+            if(i != PresistenciaCliente.clientes.size()-1){
+                String prettyPrinting = prettyGson.toJson(PresistenciaCliente.clientes.get(i));
+                writer.write(prettyPrinting + ",");
+            }else{
+                String prettyPrinting = prettyGson.toJson(PresistenciaCliente.clientes.get(i));
+                writer.write(prettyPrinting);
+            }
         }
+        writer.write("]");
         writer.close();
 
     }
     
+    private static void leerJSON() throws IOException{
+        Gson prettyGson = new Gson();
+        
+        Cliente cliente = prettyGson.fromJson("Tema 6/ControlFicheros/Clientes.json", Cliente.class);
+        System.out.println("Id: "+cliente.getId());
+        System.out.println("Nif: "+cliente.getNif());
+        System.out.println("Nombre: "+cliente.getNombre());
+        System.out.println("Apellidos: "+cliente.getApellidos());
+        System.out.println("Email: "+ cliente.getEmail());
+    }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerException, SAXException{
         crearClientes();
@@ -157,6 +180,7 @@ public class ObjetosCliente {
         crearClientesXML();
         leerClientesXML();
         crearClientesJSON();
+        leerJSON();
     }
     
 }
