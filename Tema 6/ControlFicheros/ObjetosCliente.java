@@ -4,11 +4,9 @@ import java.io.EOFException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.Writer;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -40,9 +38,11 @@ public class ObjetosCliente {
         String[] email = {"as@gmail.com", "re@gmail.com", "wq@gmail.com","pt@gmail.com"};
 
         Cliente c;
+        PresistenciaCliente pc = new PresistenciaCliente();
 
         for (int i = 0; i < id.length; i++) {
             c = new Cliente(id[i], nif[i], nombre[i], apellidos[i], email[i]);
+            pc.clientes.add(c);
             escritor.writeObject(c);
         }
         escritor.close();
@@ -139,14 +139,14 @@ public class ObjetosCliente {
     // Crear Clientes en JSON
     private static void crearClientesJSON() throws IOException{
     
+        ObjectOutputStream writer = new ObjectOutputStream(new FileOutputStream("Tema 6/ControlFicheros/Clientes.json"));
         Gson prettyGson = new GsonBuilder().setPrettyPrinting().create();
-        ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream("Tema 6/ControlFicheros/Clientes.json"));
 
         for(Cliente cliente: PresistenciaCliente.clientes){
             String prettyPrinting = prettyGson.toJson(cliente);
-            escritor.writeUTF(prettyPrinting);
+            writer.writeUTF(prettyPrinting);
         }
-        escritor.close();
+        writer.close();
 
     }
     
