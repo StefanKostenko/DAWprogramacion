@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -23,6 +26,7 @@ import javax.xml.transform.stream.StreamResult;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -164,14 +168,14 @@ public class ObjetosCliente {
     }
     
     private static void leerJSON() throws IOException{
-        Gson prettyGson = new Gson();
-        
-        Cliente cliente = prettyGson.fromJson("Tema 6/ControlFicheros/Clientes.json", Cliente.class);
-        System.out.println("Id: "+cliente.getId());
-        System.out.println("Nif: "+cliente.getNif());
-        System.out.println("Nombre: "+cliente.getNombre());
-        System.out.println("Apellidos: "+cliente.getApellidos());
-        System.out.println("Email: "+ cliente.getEmail());
+        BufferedReader lector = new BufferedReader(new FileReader("Tema 6/ControlFicheros/Clientes.json"));
+        Gson gson = new Gson();
+
+        Type tipoListaClientes = new TypeToken<List<Cliente>>(){}.getType();
+        List<Cliente> clientes = gson.fromJson(lector, tipoListaClientes);
+        for (Cliente cliente : clientes) {
+            System.out.println(cliente.toString());
+        }
     }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, ParserConfigurationException, TransformerException, SAXException{
