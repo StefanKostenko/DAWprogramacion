@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LeerWeb",
+            "request": "launch",
+            "mainClass": "Web.LeerWeb",
+            "projectName": "DAWprogramacion_608bdd91"
+        },
+        {
+            "type": "java",
             "name": "Launch LeerBooks",
             "request": "launch",
             "mainClass": "Books.LeerBooks",
