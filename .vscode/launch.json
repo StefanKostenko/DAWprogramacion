@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LeerBooks",
+            "request": "launch",
+            "mainClass": "Books.LeerBooks",
+            "projectName": "DAWprogramacion_608bdd91"
+        },
+        {
+            "type": "java",
             "name": "Launch EliminarComentarios_v3Test",
             "request": "launch",
             "mainClass": "EliminarComentarios_v3.EliminarComentarios_v3Test",
