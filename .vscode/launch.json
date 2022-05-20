@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Conexion",
+            "request": "launch",
+            "mainClass": "Mysql.Conexion",
+            "projectName": "DAWprogramacion_608bdd91"
+        },
+        {
+            "type": "java",
             "name": "Launch Calculadora",
             "request": "launch",
             "mainClass": "Calculadora.Calculadora",
