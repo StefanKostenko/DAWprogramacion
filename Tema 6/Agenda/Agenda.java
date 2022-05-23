@@ -1,8 +1,11 @@
 package Agenda;
 
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,7 +13,7 @@ public class Agenda {
     
     public static ArrayList<UsuarioAgenda> usuarios = new ArrayList<>();
 
-    public void pedirUsuarios() {
+    public void pedirUsuarios() throws FileNotFoundException, IOException {
         String nombre;
         String apellidos;
         String email;
@@ -37,12 +40,15 @@ public class Agenda {
         try {
  
             BufferedWriter bw = new BufferedWriter(new FileWriter("Tema 6/Agenda/agenda.dat"));
- 
+            ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream("Tema 6/Agenda/agendaObjetos.dat"));
+
             for (UsuarioAgenda e : usuarios) {
+                escritor.writeObject(e);
                 String usuario =  e.getNombre() + "\t" + e.getApellidos() + "\t" + e.getEmail() + "\t" + e.getTelefono() + "\n";
                 bw.write(usuario);
             }
             bw.close();
+            escritor.close();
         } catch (IOException e) {
             //Captura un posible error le imprime en pantalla   
             e.printStackTrace();
