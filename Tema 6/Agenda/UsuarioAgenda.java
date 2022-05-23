@@ -1,13 +1,14 @@
 package Agenda;
 
-public class Usuario {
+public class UsuarioAgenda {
+    
     private static final long serialVersionUID = 1L;
     private String nombre;
     private String apellidos;
     private String email;
     private int telefono;
 
-    public Usuario(String nombre, String apellidos, String email, int telefono) {
+    public UsuarioAgenda(String nombre, String apellidos, String email, int telefono) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
