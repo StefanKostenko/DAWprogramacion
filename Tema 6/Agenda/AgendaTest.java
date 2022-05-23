@@ -5,11 +5,10 @@ import java.io.IOException;
 
 public class AgendaTest {
     
-    public static void main(String[] args) throws FileNotFoundException, IOException {
+    public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
         Agenda ag = new Agenda();
         
-        ag.pedirUsuarios();
-        ag.pedirUsuarios();
+        ag.leerListadoObjetos();
     }
 
 }
