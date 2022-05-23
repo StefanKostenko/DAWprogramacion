@@ -1,0 +1,16 @@
+Crea una aplicacion que cumpla lo siguiente:
+
+-Tener un metodo que pida nombre, apellidos, email y telefono por el terminal y añada estos datos a un fichero agenda.dat
+
+-El formato del fichero sera:
+
+> nombre apellidos email telefono 
+todo ello separado por tabuladores.
+
+-De forma paralela se debe guardar un objeto con los atributos anteriores en un fichero "agendaObjetos.dat"
+
+-Cada vez que pedimos datos nuevos se deben añadir al final del fichero. No se deben borrar en cada ejecución.
+
+-Crea un metodo que muestre un listado ultilizando "agenda.dat"
+
+-Crea un metodo que muestre un listado ultilizando "agendaObjetos.dat"
