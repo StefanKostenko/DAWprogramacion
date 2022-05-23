@@ -18,7 +18,7 @@ public class Conexion {
 
       //Definir la url de conexión y los parámetros de usuario y contraseña
 
-      String host = "jdbc:mysql://192.168.204.177/phpmyadmin/index.php";
+      String host = "jdbc:mysql://localhost/phpmyadmin/index.php";
 
       String username = "phpmyadmin2";
 
