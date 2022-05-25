@@ -17,8 +17,10 @@ import java.util.Scanner;
 
 public class Agenda {
     
+    //La array de usuarios
     public static ArrayList<UsuarioAgenda> usuarios = new ArrayList<>();
 
+    //Metodo para crera y guardar un usuario.
     public void pedirUsuarios() throws FileNotFoundException, IOException {
         String nombre;
         String apellidos;
@@ -61,6 +63,7 @@ public class Agenda {
         }
     }
 
+    //Imprimir listado de agenda.dat
     public void leerListadoTexto() throws IOException{
         File doc = new File("Tema 6/Agenda/agenda.dat");
 
@@ -71,6 +74,7 @@ public class Agenda {
           System.out.println(strng);
     }
 
+    //Imprimir listado de agendaObjetos.dat
     public void leerListadoObjetos() throws FileNotFoundException, IOException, ClassNotFoundException{
         ObjectInputStream lector = new ObjectInputStream(new FileInputStream("Tema 6/Agenda/agendaObjetos.dat"));
 
