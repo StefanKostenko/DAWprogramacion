@@ -1,10 +1,13 @@
 package Agenda;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.EOFException;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -58,8 +61,14 @@ public class Agenda {
         }
     }
 
-    public void leerListadoTexto(){
-        
+    public void leerListadoTexto() throws IOException{
+        File doc = new File("Tema 6/Agenda/agenda.dat");
+
+        BufferedReader obj = new BufferedReader(new FileReader(doc));
+      
+        String strng;
+        while ((strng = obj.readLine()) != null)
+          System.out.println(strng);
     }
 
     public void leerListadoObjetos() throws FileNotFoundException, IOException, ClassNotFoundException{

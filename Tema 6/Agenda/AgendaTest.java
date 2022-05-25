@@ -9,6 +9,7 @@ public class AgendaTest {
         Agenda ag = new Agenda();
         
         ag.leerListadoObjetos();
+        ag.leerListadoTexto();
     }
 
 }
