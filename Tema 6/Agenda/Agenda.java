@@ -84,7 +84,7 @@ public class Agenda {
             while(true){
                 ua = (UsuarioAgenda) lector.readObject();
 
-                System.out.println("Nombre: " + ua.getNombre() + ", Apellidos: " + ua.getApellidos() +  ", email: " + ua.getEmail() + ", telefono: " + ua.getTelefono());
+                System.out.println(ua.getNombre() + "\t" + ua.getApellidos() + "\t" + ua.getEmail() + "\t" + ua.getTelefono());
             }
         } catch (EOFException eof){
             lector.close();
