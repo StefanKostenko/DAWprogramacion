@@ -23,10 +23,18 @@ public class Conexion {
       String username = "phpmyadmin";
 
       String password = "phpmyadmin";
+      String consulta = "SELECT * FROM cliente";
 
       Connection con = DriverManager.getConnection(host, username, password);
 
       System.out.println("Conexión completada");
+
+      PreparedStatement ps = con.prepareStatement(consulta);
+      ResultSet rs = ps.executeQuery();
+
+        while(rs.next()){
+          System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getString(3) + " " + rs.getString(4));
+        }
 
       con.close();
 
