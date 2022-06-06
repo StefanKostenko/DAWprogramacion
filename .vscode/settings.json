@@ -15,7 +15,8 @@
         "/home/INFORMATICA/alu11395193/Documents/jackson-databind-2.13.2.2.jar",
         "/home/INFORMATICA/alu11395193/Documents/jackson-core-2.13.2.jar",
         "/home/INFORMATICA/alu11395193/Documents/jackson-annotations-2.13.2.jar",
-        "/home/INFORMATICA/alu11395193/Baixades/mysql-connector-java-8.0.29/mysql-connector-java-8.0.29.jar"
+        "/home/INFORMATICA/alu11395193/Baixades/mysql-connector-java-8.0.29/mysql-connector-java-8.0.29.jar",
+        "/usr/share/java/mysql-connector-java-8.0.29.jar"
     ],
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m"
 }

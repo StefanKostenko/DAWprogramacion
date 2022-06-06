@@ -18,15 +18,23 @@ public class Conexion {
 
       //Definir la url de conexión y los parámetros de usuario y contraseña
 
-      String host = "jdbc:mysql://localhost/phpmyadmin/index.php";
+      String host = "jdbc:mysql://10.0.2.4:3306/clientes";
 
-      String username = "phpmyadmin2";
+      String username = "phpmyadmin";
 
       String password = "phpmyadmin";
+      String consulta = "SELECT * FROM cliente";
 
       Connection con = DriverManager.getConnection(host, username, password);
 
       System.out.println("Conexión completada");
+
+      PreparedStatement ps = con.prepareStatement(consulta);
+      ResultSet rs = ps.executeQuery();
+
+      while(rs.next()){
+        System.out.println (rs.getInt (1) + " " + rs.getString (2)+ " " + rs.getString(3) + " " + rs.getString(4));
+      }
 
       con.close();
 

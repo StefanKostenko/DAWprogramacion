@@ -6,10 +6,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch MySQLInsert",
+            "name": "Launch Conexion",
             "request": "launch",
-            "mainClass": "Mysql.MySQLInsert",
-            "projectName": "DAWprogramacion_608bdd91"
+            "mainClass": "Mysql.Conexion",
+            "projectName": "DAWprogramacion_c4bffbb2"
         },
         {
             "type": "java",
