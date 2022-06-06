@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MySQLUpdate",
+            "request": "launch",
+            "mainClass": "Mysql.MySQLUpdate",
+            "projectName": "DAWprogramacion_c4bffbb2"
+        },
+        {
+            "type": "java",
             "name": "Launch MySQLCount",
             "request": "launch",
             "mainClass": "Mysql.MySQLCount",
