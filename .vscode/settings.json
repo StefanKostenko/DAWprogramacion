@@ -6,8 +6,9 @@
         "Tema 3",
         "Tema 2",
         "Tema 1",
+        "Repaso/EliminarVocales",
         "Controles/Control 03",
-        "Repaso/EliminarVocales"
+        "Repaso/DobleByte"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",

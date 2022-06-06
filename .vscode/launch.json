@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DobleBytes",
+            "request": "launch",
+            "mainClass": "DobleBytes",
+            "projectName": "DAWprogramacion_ff208a38"
+        },
+        {
+            "type": "java",
             "name": "Launch EliminarVocales",
             "request": "launch",
             "mainClass": "EliminarVocales",
