@@ -51,7 +51,7 @@ public class Agenda {
             ObjectOutputStream escritor = new ObjectOutputStream(new FileOutputStream("Tema 6/Agenda/agendaObjetos.dat"));
 
             for (UsuarioAgenda e : usuarios) {
-                escritor.writeObject(e);
+                
                 String usuario =  e.getNombre() + "\t" + e.getApellidos() + "\t" + e.getEmail() + "\t" + e.getTelefono() + "\n";
                 bw.write(usuario);
             }
