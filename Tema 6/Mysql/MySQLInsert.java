@@ -20,7 +20,7 @@ public class MySQLInsert {
         try {
              Class.forName("com.mysql.cj.jdbc.Driver");
        
-        Connection conn =DriverManager.getConnection(connectioURL,"phpmyadmin2","phpmyadmin2");
+        Connection conn =DriverManager.getConnection(connectioURL,"phpmyadmin2","phpmyadmin");
              PreparedStatement ps = conn.prepareStatement(consulta);
              Scanner lector = new Scanner(System.in);
              
