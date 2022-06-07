@@ -7,11 +7,13 @@
         "Tema 2",
         "Tema 1",
         "Repaso/SinEspacios",
+        "Repaso/NumerosAleatorios",
+        "Repaso/Mezcla_v2",
         "Repaso/Mayus",
         "Repaso/EliminarVocales",
         "Repaso/DobleByte",
         "Controles/Control 03",
-        "Repaso/Mezcla_v2"
+        "Repaso/Coches"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",

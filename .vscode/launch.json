@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Coches",
+            "request": "launch",
+            "mainClass": "Coches",
+            "projectName": "DAWprogramacion_ff208a38"
+        },
+        {
+            "type": "java",
+            "name": "Launch NumerosAleatorios",
+            "request": "launch",
+            "mainClass": "NumerosAleatorios",
+            "projectName": "DAWprogramacion_ff208a38"
+        },
+        {
+            "type": "java",
             "name": "Launch Mezcla_v2",
             "request": "launch",
             "mainClass": "Mezcla_v2",
