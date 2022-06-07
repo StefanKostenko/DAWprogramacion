@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TextPersonaXML",
+            "request": "launch",
+            "mainClass": "Persona.TextPersonaXML",
+            "projectName": "DAWprogramacion_608bdd91"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestPersona",
+            "request": "launch",
+            "mainClass": "Persona.TestPersona",
+            "projectName": "DAWprogramacion_608bdd91"
+        },
+        {
+            "type": "java",
             "name": "Launch DobleBytes",
             "request": "launch",
             "mainClass": "DobleBytes",
