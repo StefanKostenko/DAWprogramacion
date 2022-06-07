@@ -6,9 +6,12 @@
         "Tema 3",
         "Tema 2",
         "Tema 1",
+        "Repaso/SinEspacios",
+        "Repaso/Mayus",
         "Repaso/EliminarVocales",
+        "Repaso/DobleByte",
         "Controles/Control 03",
-        "Repaso/DobleByte"
+        "Repaso/Mezcla_v2"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",

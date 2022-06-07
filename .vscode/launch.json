@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Mezcla_v2",
+            "request": "launch",
+            "mainClass": "Mezcla_v2",
+            "projectName": "DAWprogramacion_ff208a38"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mayus",
+            "request": "launch",
+            "mainClass": "Mayus",
+            "projectName": "DAWprogramacion_ff208a38"
+        },
+        {
+            "type": "java",
+            "name": "Launch SinEspacios",
+            "request": "launch",
+            "mainClass": "SinEspacios",
+            "projectName": "DAWprogramacion_ff208a38"
+        },
+        {
+            "type": "java",
             "name": "Launch TextPersonaXML",
             "request": "launch",
             "mainClass": "Persona.TextPersonaXML",
