@@ -9,6 +9,13 @@
             "name": "Launch Coches",
             "request": "launch",
             "mainClass": "Coches",
+            "projectName": "DAWprogramacion_608bdd91"
+        },
+        {
+            "type": "java",
+            "name": "Launch Coches",
+            "request": "launch",
+            "mainClass": "Coches",
             "projectName": "DAWprogramacion_ff208a38"
         },
         {

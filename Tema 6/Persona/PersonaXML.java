@@ -1,10 +1,8 @@
 package Persona;
 
 import java.io.EOFException;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -30,44 +28,32 @@ public class PersonaXML extends Persona implements GenerableXML{
     public void generarXML() throws ClassNotFoundException, IOException, ParserConfigurationException, TransformerFactoryConfigurationError, TransformerException {
         // TODO Auto-generated method stub
 
-        ObjectInputStream lector = new ObjectInputStream(new FileInputStream("Tema 6/Persona/" + getNombre() + getApellidos() + ".persona"));
-
         Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
         Element root = doc.createElement("personas");
         doc.appendChild(root);
+        
+        Element emp = doc.createElement("nombre");
+        emp.setAttribute("nombre", (getNombre()));
 
-        PersonaXML px;
+        Element edad = doc.createElement("edad");
+        edad.appendChild(doc.createTextNode(Integer.toString(getEdad())));
+        emp.appendChild(edad);
 
-        try{
-            while(true){
-                px = (PersonaXML) lector.readObject();
-                Element emp = doc.createElement("nombre");
-                emp.setAttribute("nombre", (px.getNombre()));
+        Element apellidos = doc.createElement("apellidos");
+        apellidos.appendChild(doc.createTextNode(getApellidos()));
+        emp.appendChild(apellidos);
 
-                Element edad = doc.createElement("edad");
-                edad.appendChild(doc.createTextNode(Integer.toString(px.getEdad())));
-                emp.appendChild(edad);
+        Element domicilio = doc.createElement("domicilio");
+        domicilio.appendChild(doc.createTextNode(getDomicilio()));
+        emp.appendChild(domicilio);
 
-                Element apellidos = doc.createElement("apellidos");
-                apellidos.appendChild(doc.createTextNode(px.getApellidos()));
-                emp.appendChild(apellidos);
-
-                Element domicilio = doc.createElement("domicilio");
-                domicilio.appendChild(doc.createTextNode(px.getDomicilio()));
-                emp.appendChild(domicilio);
-
-                root.appendChild(emp);
-            }
-        } catch (EOFException eof) {
-            lector.close();
-        }
-
+        root.appendChild(emp);
+    
         Transformer transformar = TransformerFactory.newInstance().newTransformer();
 
         DOMSource source = new DOMSource(doc);
         StreamResult resultado = new StreamResult(new FileOutputStream("Tema 6/Persona/" + getNombre() + getEdad() + ".xml"));
 
         transformar.transform(source, resultado);
-        
     }
 }
