@@ -60,7 +60,7 @@ public class Coches implements Serializable{
         
     @Override
     public String toString() {
-        return "marca\n" + marca + "\nmatricula\n" + matricula + "\nmodelo\n" + modelo + "\ntamaño Deposito\n"
+        return "marca\t" + marca + "\tmatricula\t" + matricula + "\tmodelo\t" + modelo + "\ttamaño Deposito\t"
                 + tamanyoDeposito;
     }
     
